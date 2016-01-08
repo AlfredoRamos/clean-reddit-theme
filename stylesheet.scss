@@ -1,7 +1,7 @@
 /**
- * SDDM Themes subreddit theme <https://www.reddit.com/r/sddm_themes>
- * Only optimized for modern browsers and screen resolutions >= 1024x768 px
- * @version 0.1.26
+ * SDDM Themes <https://www.reddit.com/r/sddm_themes>
+ * GitHub <https://github.com/AlfredoRamos/clean-reddit-theme>
+ * @version 0.1.28
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+ <https://www.gnu.org/licenses/gpl-3.0.txt>
@@ -42,6 +42,12 @@ $font-family: Tahoma,Verdana,Segoe,sans-serif;
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+}
+
+@mixin box-shadow($shadow) {
+	box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	-webkit-box-shadow: $shadow;
 }
 
 @mixin border-radius($radius) {
@@ -610,6 +616,39 @@ a,
 			& #preview-table {
 				& table {
 					width: 100%;
+				}
+			}
+		}
+		
+		& #sr-form {
+			& .linefield {
+				width: 100%;
+				border-width: 1px;
+				border-style: solid;
+				border-color: $br-info;
+				@include border-radius($brad-global);
+				
+				& .linefield-content {
+					padding: 0;
+					
+					& .usertext-edit {
+						width: 100%;
+						
+						& .md {
+							max-width: 100%;
+						}
+					}
+					
+					& input[type="text"],
+					& textarea {
+						width: 100%;
+						padding: 3px;
+						border-width: 1px;
+						border-style: solid;
+						border-color: $bg-header;
+						@include border-radius($brad-global);
+						@include box-shadow(none);
+					}
 				}
 			}
 		}
