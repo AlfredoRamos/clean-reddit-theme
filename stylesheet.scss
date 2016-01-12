@@ -1,7 +1,7 @@
 /**
- * SDDM Themes <https://www.reddit.com/r/sddm_themes>
+ * Clean Reddit Theme
  * GitHub <https://github.com/AlfredoRamos/clean-reddit-theme>
- * @version 0.1.30
+ * @version 0.1.32
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+ <https://www.gnu.org/licenses/gpl-3.0.txt>
@@ -75,6 +75,25 @@ $font-family: Tahoma,Verdana,Segoe,sans-serif;
 body {
 	background-color: $bg-body;
 	font-family: $font-family;
+	
+	& input[type="text"],
+	& input[type="password"],
+	& input[type="url"],
+	& textarea {
+		width: 100%;
+		padding: 3px;
+		border-width: 1px;
+		border-style: solid;
+		border-color: $bg-sidebar;
+		@include border-radius($brad-global);
+	}
+	
+	& textarea {
+		min-width: 100%;
+		max-width: 100%;
+		min-height: 100px;
+		max-height: 300px;
+	}
 }
 
 // Header
@@ -233,9 +252,7 @@ body {
 		background-color: $bg-sidebar;
 		
 		& input[type="text"] {
-			width: 100%;
 			border-color: $br-sidebox;
-			@include border-radius($brad-global);
 		}
 	}
 	
@@ -250,7 +267,6 @@ body {
 			margin: 5px auto 0;
 			font-family: $font-family;
 			border-color: $br-sidebox;
-			@include border-radius($brad-global);
 		}
 	}
 	
@@ -260,8 +276,8 @@ body {
 			background-color: $bg-submit-link;
 			text-transform: uppercase;
 			font-size: 13px;
-			@include border-radius($brad-global);
 			border-width: 0;
+			@include border-radius($brad-global);
 			
 			&,
 			& .nub {
@@ -450,22 +466,12 @@ body > .content {
 				width: 100%;
 				
 				& .md {
+					width: 100%;
 					max-width: 100%;
 					
 					&,
 					& textarea {
 						width: 100%;
-					}
-					
-					& textarea {
-						min-width: 100%;
-						max-width: 100%;
-						min-height: 100px;
-						max-height: 300px;
-						border-width: 1px;
-						border-style: solid;
-						border-color: $bg-sidebar;
-						@include border-radius($brad-global);
 					}
 				}
 			}
@@ -570,30 +576,17 @@ a,
 				border-color: $br-info;
 				@include border-radius($brad-global);
 				
-				& textarea,
-				& input[type="text"],
-				& input[type="password"],
-				& input[type="url"] {
-					width: 100%;
-					border-width: 1px;
-					border-style: solid;
-					border-color: $bg-header;
-					@include border-radius($brad-global);
-				}
-				
-				& textarea {
-					min-width: 100%;
-					max-width: 100%;
-					min-height: 100px;
-					max-height: 300px;
-				}
-				
 				& .usertext-edit {
 					width: 100%;
 					
 					& .md {
 						max-width: 100%;
 					}
+				}
+				
+				& input[type="text"],
+				& input[type="url"] {
+					width: 100%;
 				}
 			}
 		}
@@ -646,12 +639,7 @@ a,
 					
 					& input[type="text"],
 					& textarea {
-						width: 100%;
-						padding: 3px;
-						border-width: 1px;
-						border-style: solid;
 						border-color: $bg-header;
-						@include border-radius($brad-global);
 						@include box-shadow(none);
 					}
 				}
