@@ -1,7 +1,7 @@
 /**
  * Clean Reddit Theme
  * GitHub <https://github.com/AlfredoRamos/clean-reddit-theme>
- * @version 0.1.32
+ * @version 0.2.1
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+ <https://www.gnu.org/licenses/gpl-3.0.txt>
@@ -82,9 +82,7 @@ body {
 	& textarea {
 		width: 100%;
 		padding: 3px;
-		border-width: 1px;
-		border-style: solid;
-		border-color: $bg-sidebar;
+		border: 1px solid $br-sidebox;
 		@include border-radius($brad-global);
 	}
 	
@@ -146,7 +144,6 @@ body {
 	#header-bottom-left {
 		background-color: transparent;
 		color: $fg-header;
-		height: 60px;
 		
 		& a {
 			color: $bg-sidebar;
@@ -236,16 +233,8 @@ body {
 	border-width: 0 0 1px 1px;
 	border-style: solid;
 	border-color: $br-sidebar;
-	padding: 5px 10px;
 	margin: 0;
-	width: 25%;	// .col-3
 	@include border-radius($brad-global);
-	
-	@include responsive(max-width, 991px) {
-		& {
-			width: 100%;
-		}
-	}
 	
 	// Search input
 	& #search {
@@ -253,6 +242,7 @@ body {
 		
 		& input[type="text"] {
 			border-color: $br-sidebox;
+			width: 100%;
 		}
 	}
 	
@@ -266,7 +256,6 @@ body {
 			display: block;
 			margin: 5px auto 0;
 			font-family: $font-family;
-			border-color: $br-sidebox;
 		}
 	}
 	
@@ -276,7 +265,7 @@ body {
 			background-color: $bg-submit-link;
 			text-transform: uppercase;
 			font-size: 13px;
-			border-width: 0;
+			border: none;
 			@include border-radius($brad-global);
 			
 			&,
@@ -304,14 +293,16 @@ body {
 	
 	& .spacer {
 		background-color: $bg-spacer;
+		
+		& .md {
+			max-width: 100%;
+		}
 	}
 	
 	& .sidecontentbox,
 	& .titlebox,
 	& .account-activity-box {
-		border-width: 1px;
-		border-style: solid;
-		border-color: $br-sidebox;
+		border: 1px solid $br-sidebox;
 		padding: 5px;
 		@include border-radius($brad-global);
 	}
@@ -386,18 +377,13 @@ body {
 // Content
 body > .content,
 .side {
-	margin-bottom: 15px;
+	width: 100%;
+	display: inline-block;
+	margin: 0 0 15px;
+	padding: 5px 10px;
 }
 
-body > .content {
-	width: 74%; // .col-9 - 1%
-	
-	@include responsive(max-width, 991px) {
-		& {
-			width: 100%;
-		}
-	}
-	
+body > .content {	
 	// Post/Comment list
 	& .linklisting,
 	& .commentarea {
@@ -407,9 +393,7 @@ body > .content {
 			background-color: $bg-post-odd;
 			padding: 2px 5px;
 			margin: 0 0 5px;
-			border-width: 1px;
-			border-style: solid;
-			border-color: $br-sidebar;
+			border: 1px solid $br-sidebar;
 			@include border-radius($brad-global);
 		}
 	}
@@ -508,6 +492,7 @@ body > .content {
 	}
 }
 
+// Links
 a,
 .content .thing .title {
 	&,
@@ -571,9 +556,7 @@ a,
 			}
 			
 			& .roundfield {
-				border-width: 1px;
-				border-style: solid;
-				border-color: $br-info;
+				border: 1px solid $br-info;
 				@include border-radius($brad-global);
 				
 				& .usertext-edit {
@@ -604,9 +587,7 @@ a,
 	& .content {
 		& .linefield {
 			width: 100%;
-			border-width: 1px;
-			border-style: solid;
-			border-color: $br-info;
+			border: 1px solid $br-info;
 			@include border-radius($brad-global);
 			
 			& .linefield-content {
@@ -649,9 +630,7 @@ a,
 		& .flair-settings {
 			& .linefield {
 				width: 100%;
-				border-width: 1px;
-				border-style: solid;
-				border-color: $br-info;
+				border: 1px solid $br-info;
 				@include border-radius($brad-global);
 			}
 		}
@@ -664,7 +643,7 @@ a,
 			& .flairlist {
 				& .flair-jump {
 					margin: 0;
-					border-width: 0;
+					border: none;
 					background-color: transparent;
 				}
 			}
@@ -702,10 +681,8 @@ a,
 			background-color: $bg-post-odd;
 			padding: 2px 5px;
 			margin: 0 0 5px;
-			border-width: 1px;
-			border-style: solid;
-			border-color: $br-sidebar;
 			min-height: 75px;
+			border: 1px solid $br-sidebar;
 			@include border-radius($brad-global);
 			
 			&:nth-child(2n) {
@@ -721,5 +698,27 @@ a,
 		background-color: $bg-post-even;
 		border-color: $br-sidebox;
 		@include border-radius($brad-global);
+	}
+}
+
+// Responsive
+@include responsive(min-width, 992px) {
+	.side {
+		width: 25%;	// .col-3
+	}
+	
+	body > .content {
+		width: 75%; // .col-9
+	}
+}
+
+@include responsive(max-width, 991px) {
+	#header {
+		display: inline-block;
+		width: 100%;
+		
+		& #header-bottom-right {
+			position: relative;
+		}
 	}
 }
