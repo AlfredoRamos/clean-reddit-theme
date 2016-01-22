@@ -1,6 +1,7 @@
 ### Tools
 
 - SASS processor [[docs](http://sass-lang.com/install)]
+- GraphicsMagick (optional) [[docs](http://www.graphicsmagick.org/README.html)]
 
 ### Build
 
@@ -24,3 +25,11 @@ Copy the content of the generated `stylesheet.css` file to your reddit styleshee
 ```
 reddit.com/r/<YOUR_REDDIT>/about/stylesheet/
 ```
+
+Making a smaller `PNG` image using GraphicsMagick command line tool:
+
+```shell
+gm convert -resize 50x images/header_image.png images/header_image_50.png
+```
+
+For more info, refer to the GraphicsMagick's [convert](http://www.graphicsmagick.org/convert.html) manpage.
