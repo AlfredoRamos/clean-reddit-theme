@@ -8,7 +8,7 @@
 Using [`sassc`](https://www.archlinux.org/packages/community/x86_64/sassc/):
 
 ```shell
-sassc -t compressed stylesheet.scss stylesheet.css
+sassc -t compressed stylesheet.scss dist/stylesheet.css
 ```
 
 **Note:** The stylesheet must be always be compressed because of the reddit's 100 kb file limit. More info:
@@ -29,7 +29,13 @@ reddit.com/r/<YOUR_REDDIT>/about/stylesheet/
 Making a smaller `PNG` image using GraphicsMagick command line tool:
 
 ```shell
-gm convert -resize 50x images/header_image.png images/header_image_50.png
+gm convert -gravity center -background transparent -resize x50 -extent 50x50 images/header_image.png dist/header_image_50x50.png
+```
+
+Making mobile icon:
+
+```shell
+gm convert -gravity center -background transparent -resize x250 -extent 256x256 images/header_image.png dist/mobile_icon_256x256.png
 ```
 
 For more info, refer to the GraphicsMagick's [convert](http://www.graphicsmagick.org/convert.html) manpage.

@@ -1,7 +1,7 @@
 /**
  * Clean Reddit Theme
  * GitHub <https://github.com/AlfredoRamos/clean-reddit-theme>
- * @version 0.2.2
+ * @version 0.2.3
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+ <https://www.gnu.org/licenses/gpl-3.0.txt>
@@ -40,21 +40,21 @@ $font-family: Tahoma,Verdana,Segoe,sans-serif;
 
 // Mixins
 @mixin border-box {
-	box-sizing: border-box;
-	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 @mixin box-shadow($shadow) {
-	box-shadow: $shadow;
-	-moz-box-shadow: $shadow;
 	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
 }
 
 @mixin border-radius($radius) {
-	border-radius: $radius;
-	-moz-border-radius: $radius;
 	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
 }
 
 @mixin responsive($property, $breakpoint) {
@@ -626,6 +626,7 @@ a,
 					
 					& input[type="text"],
 					& textarea {
+						width: 100%;
 						border-color: $bg-header;
 						@include box-shadow(none);
 					}
