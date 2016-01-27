@@ -539,7 +539,7 @@ body > .content {
 	}
 	
 	// Info bar
-	> .infobar {
+	& > .infobar {
 		margin: 0;
 	}
 }
@@ -577,7 +577,7 @@ a,
 		color: $fg-header;
 	}
 	
-	> .footer {
+	& > .footer {
 		border: none;
 		
 		.col {
@@ -755,8 +755,6 @@ a,
 }
 
 // Content only when logged-in
-
-
 .loggedin > .content {
 	// Comments
 	.commentarea {
