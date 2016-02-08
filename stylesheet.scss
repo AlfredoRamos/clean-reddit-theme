@@ -1,7 +1,7 @@
 /**
  * Clean Reddit Theme
  * GitHub <https://github.com/AlfredoRamos/clean-reddit-theme>
- * @version 0.2.7
+ * @version 0.2.8
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+ <https://www.gnu.org/licenses/gpl-3.0.txt>
@@ -541,6 +541,14 @@ body > .content {
 	// Info bar
 	& > .infobar {
 		margin: 0;
+	}
+	
+	// New comment
+	.new-comment {
+		.usertext-body {
+			background-color: transparent;
+			border: none;
+		}
 	}
 }
 
