@@ -1,7 +1,7 @@
 /**
  * Clean Reddit Theme
  * GitHub <https://github.com/AlfredoRamos/clean-reddit-theme>
- * @version 0.2.9
+ * @version 0.2.9-r1
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+ <https://www.gnu.org/licenses/gpl-3.0.txt>
@@ -69,14 +69,14 @@ $font-family: Tahoma,Verdana,Segoe,sans-serif;
 	
 	@for $n from 1 through $max {
 		@if $n == 1 {
-			$line-numbers: $line-numbers + '#{$n}';
+			$line-numbers: '#{$n}';
 		} @else {
 			@if $n < 10 {
-				$line-numbers: $line-numbers + '   #{$n}';
+				$line-numbers: '#{$line-numbers}   #{$n}';
 			} @else if $n >= 10 and $n < 100 {
-				$line-numbers: $line-numbers + '  #{$n}';
+				$line-numbers: '#{$line-numbers}  #{$n}';
 			} @else {
-				$line-numbers: $line-numbers + ' #{$n}';
+				$line-numbers: '#{$line-numbers} #{$n}';
 			}
 		}
 	}
