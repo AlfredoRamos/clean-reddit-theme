@@ -1,7 +1,7 @@
 /**
  * Clean Reddit Theme
  * GitHub <https://github.com/AlfredoRamos/clean-reddit-theme>
- * @version 0.2.8
+ * @version 0.2.9
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+ <https://www.gnu.org/licenses/gpl-3.0.txt>
@@ -390,6 +390,17 @@ body {
 		display: none;
 	}
 	
+	// Ads
+	.sponsorshipbox,
+	#ad_main{
+		max-width: 100%;
+		width: 100%;
+		
+		& > iframe {
+			width: 100%;
+		}
+	}
+	
 	// Credits
 	// Respect my work, do not edit
 	&::after {
@@ -408,6 +419,7 @@ body > .content,
 	display: inline-block;
 	margin: 0 0 15px;
 	padding: 5px 10px;
+	overflow: hidden;
 }
 
 body > .content {
@@ -786,6 +798,11 @@ a,
 		margin: 0;
 		padding: 10px;
 	}
+}
+
+// What is this for?
+#hsts_pixel {
+	display: none;
 }
 
 // Responsive
