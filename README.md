@@ -5,10 +5,10 @@
 
 ### Build
 
-Using [`sassc`](https://www.archlinux.org/packages/community/x86_64/sassc/):
+Using `sass`
 
 ```shell
-sassc -t compressed stylesheet.scss dist/stylesheet.css
+sass -Ct compressed stylesheet.scss dist/stylesheet.css --sourcemap=none
 ```
 
 **Note:** The stylesheet must be always be compressed because of the reddit's 100 kb file limit. More info:
