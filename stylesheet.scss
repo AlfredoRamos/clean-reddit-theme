@@ -1,7 +1,7 @@
 /**
  * Clean Reddit Theme
  * GitHub <https://github.com/AlfredoRamos/clean-reddit-theme>
- * @version 0.2.9-r2
+ * @version 0.3.0
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+ <https://www.gnu.org/licenses/gpl-3.0.txt>
@@ -13,7 +13,7 @@ $bg-header: #2d2d2d;
 $bg-header-right: #515151;
 $bg-footer: #393939;
 $bg-sidebar: #ededed;
-$bg-spacer: #fff;
+$bg-side-content: #fff;
 $bg-post-odd: #fcfcfc;
 $bg-post-even: #f8f8f8;
 $bg-submit-link: #69c;
@@ -57,6 +57,13 @@ $font-family: Tahoma,Verdana,Segoe,sans-serif;
 	border-radius: $radius;
 }
 
+@mixin background-size($size) {
+	-webkit-background-size: $size;
+	-moz-background-size: $size;
+	-o-background-size: $size;
+	background-size: $size;
+}
+
 @mixin responsive($property, $breakpoint) {
 	@media only screen and (#{$property}: $breakpoint) {
 		@content;
@@ -66,7 +73,7 @@ $font-family: Tahoma,Verdana,Segoe,sans-serif;
 // Functions
 @function code-line-numbers($max: 300) {
 	$line-numbers: '';
-	
+
 	@for $n from 1 through $max {
 		@if $n == 1 {
 			$line-numbers: '#{$n}';
@@ -80,7 +87,7 @@ $font-family: Tahoma,Verdana,Segoe,sans-serif;
 			}
 		}
 	}
-	
+
 	@return $line-numbers;
 }
 
@@ -96,7 +103,7 @@ $font-family: Tahoma,Verdana,Segoe,sans-serif;
 body {
 	background-color: $bg-body;
 	font-family: $font-family;
-	
+
 	input[type="text"],
 	input[type="password"],
 	input[type="url"],
@@ -106,7 +113,7 @@ body {
 		border: 1px solid $br-sidebox;
 		@include border-radius($brad-global);
 	}
-	
+
 	textarea {
 		min-width: 100%;
 		max-width: 100%;
@@ -119,90 +126,90 @@ body {
 #header {
 	background-color: $bg-header;
 	border: none;
-	
+
 	#sr-header-area {
 		background-color: $bg-footer;
 		border: none;
-		
+
 		a {
 			color: $fg-header;
-			
+
 			&:hover {
 				color: $bg-sidebar;
 			}
 		}
-		
+
 		.width-clip {
 			.dropdown {
 				.selected {
 					color: $bg-sidebar;
 				}
 			}
-			
+
 			.drop-choices {
 				background-color: $bg-footer;
 				@include border-radius($brad-global);
-				
+
 				.choice {
 					&:hover {
 						background-color: $bg-header-right;
 					}
 				}
-				
+
 				&,
 				.bottom-option {
 					border-color: $bg-header-right;
 				}
 			}
-			
+
 			#sr-more-link {
 				background-color: $bg-header-right;
 				color: $bg-sidebar;
 			}
 		}
 	}
-	
+
 	#header-bottom-left {
 		background-color: transparent;
 		color: $fg-header;
-		
+
 		a {
 			color: $bg-sidebar;
-			
+
 			&:hover {
 				color: $bg-post-even;
 			}
 		}
-		
+
 		#header-img-a {
 			#header-img {
 				vertical-align: middle;
 				margin: 2px 5px 5px;
 			}
 		}
-		
+
 		.redditname,
 		.tabmenu {
 			vertical-align: middle;
 		}
-		
+
 		.tabmenu {
 			li {
 				display: inline-block;
 				margin: 0;
-				
+
 				.choice {
 					background-color: $bg-header-right;
 					font-weight: 500;
 					padding: 2px 5px;
 					margin: 0 2px;
 					@include border-radius($brad-global);
-					
+
 					&:hover {
 						background-color: $fg-header;
 					}
 				}
-				
+
 				&.selected {
 					.choice {
 						font-weight: 700;
@@ -214,35 +221,35 @@ body {
 			}
 		}
 	}
-	
+
 	#header-bottom-right {
 		background-color: $bg-header-right;
 		margin: 5px;
 		@include border-radius($brad-global);
-		
+
 		&,
 		.user {
 			color: $br-sidebox;
 		}
-		
+
 		.separator {
 			color: $fg-header;
 		}
-		
+
 		.user {
 			a {
 				font-weight: 700;
 			}
 		}
-		
+
 		a {
 			color: $bg-sidebar;
-			
+
 			&:hover {
 				color: $bg-post-even;
 			}
 		}
-		
+
 		.userkarma {
 			color: $fg-header-title;
 		}
@@ -257,21 +264,19 @@ body {
 	border-color: $br-sidebar;
 	margin: 0;
 	@include border-radius($brad-global);
-	
+
 	// Search input
 	#search {
-		background-color: $bg-sidebar;
-		
 		input[type="text"] {
 			border-color: $br-sidebox;
 			width: 100%;
 		}
 	}
-	
+
 	// Login form
 	.login-form-side {
 		border-color: $br-sidebar;
-		
+
 		input[type="text"],
 		input[type="password"] {
 			width: 97%;
@@ -280,67 +285,66 @@ body {
 			font-family: $font-family;
 		}
 	}
-	
+
 	// Submit links
-	.submit {
-		.morelink {
-			background-color: $bg-submit-link;
-			text-transform: uppercase;
-			font-size: 13px;
-			border: none;
-			@include border-radius($brad-global);
-			
-			&,
-			.nub {
-				background-image: none;
-			}
-			
-			.nub {
-				position: relative;
-				width: 0;
-				height: 0;
-				display: none;
-			}
-			
-			&,
-			a {
-				color: $bg-sidebar;
-				
-				&:hover {
-					color: $bg-spacer;
-				}
+	.morelink {
+		background-color: $bg-submit-link;
+		text-transform: uppercase;
+		font-size: 13px;
+		border: none;
+		@include border-radius($brad-global);
+
+		&,
+		.nub {
+			background-image: none;
+		}
+
+		.nub {
+			position: relative;
+			width: 0;
+			height: 0;
+			display: none;
+		}
+
+		&,
+		a {
+			color: $bg-sidebar;
+
+			&:hover {
+				color: $bg-side-content;
 			}
 		}
 	}
-	
+
 	.spacer {
-		background-color: $bg-spacer;
-		
+		background-color: transparent;
+
 		.md {
 			max-width: 100%;
-			
+
 			ul,
 			ol {
 				padding: 0 30px;
 			}
 		}
 	}
-	
+
 	.sidecontentbox,
 	.titlebox,
 	.account-activity-box {
 		border: 1px solid $br-sidebox;
 		padding: 5px;
+		background-color: $bg-side-content;
 		@include border-radius($brad-global);
 	}
-	
+
 	.sidecontentbox {
 		.title {
 			padding: 0 0 5px;
 			border-width: 0 0 1px;
 			border-style: solid;
 			border-color: $bg-sidebar;
-		
+
 			h1 {
 				font-weight: 700;
 				font-size: 13px;
@@ -348,16 +352,16 @@ body {
 				color: $bg-header;
 			}
 		}
-		
+
 		.content {
 			border: none;
-			
+
 			.icon-menu a {
 				background-color: transparent;
 			}
 		}
 	}
-	
+
 	.titlebox {
 		h1 {
 			text-transform: uppercase;
@@ -365,45 +369,51 @@ body {
 			font-size: 13px;
 			line-height: 16px;
 		}
-		
+
 		.subscribe-button {
 			.add,
 			.remove {
 				background-image: none;
 			}
-			
+
 			.add {
 				background-color: $bg-subscribe;
 			}
-			
+
 			.remove {
 				background-color: $bg-unsubscribe;
 			}
 		}
-		
+
 		.bottom {
 			border-color: $bg-sidebar;
 		}
 	}
-	
+
 	.sidebox.create {
-		display: none;
+		.spacer {
+			a {
+				background-position: 50%;
+				@include background-size(cover);
+			}
+		}
 	}
-	
+
 	// Ads
 	.sponsorshipbox {
 		max-width: 100%;
-		
+
 		& > #ad_sponsorship {
-			width: 100%;
+			display: block;
+			margin: 0 auto;
 		}
 	}
-	
+
 	// More ads
 	#ad_main{
 		width: 100%;
 	}
-	
+
 	// Credits
 	// Respect my work, do not edit
 	&::after {
@@ -439,7 +449,7 @@ body > .content {
 			@include border-radius($brad-global);
 		}
 	}
-	
+
 	// Posts
 	.linklisting {
 		.thing {
@@ -448,7 +458,7 @@ body > .content {
 			}
 		}
 	}
-	
+
 	// Comments
 	.commentarea {
 		.panestack-title,
@@ -462,19 +472,19 @@ body > .content {
 			border-left-width: 1px;
 			border-right-width: 1px;
 		}
-		
+
 		.panestack-title,
 		.menuarea {
 			margin: 0;
 		}
-		
+
 		.panestack-title {
 			padding-top: 5px;
 			padding-bottom: 5px;
 			border-top-width: 1px;
 			@include border-radius($brad-global $brad-global 0 0);
 		}
-		
+
 		.menuarea {
 			border-top: none;
 			margin: 0 0 15px;
@@ -482,15 +492,15 @@ body > .content {
 			border-bottom-width: 1px;
 			@include border-radius(0 0 $brad-global $brad-global);
 		}
-		
+
 		.usertext {
 			.usertext-edit {
 				width: 100%;
-				
+
 				.md {
 					width: 100%;
 					max-width: 100%;
-					
+
 					&,
 					textarea {
 						width: 100%;
@@ -498,32 +508,32 @@ body > .content {
 				}
 			}
 		}
-		
+
 		.comment-visits-box {
 			max-width: 100%;
 			width: 100%;
 			margin: 0 0 15px;
 			text-align: center;
 		}
-		
+
 		&,
 		.sitetable {
 			background-color: transparent;
 			margin: 5px 0 0;
-			
+
 			#noresults {
 				margin: 0;
 				text-align: center;
 			}
 		}
-		
+
 		.child {
 			.thing {
 				background-color: $bg-post-even;
 			}
 		}
 	}
-	
+
 	// Code blocks with line numbers
 	.md {
 		pre {
@@ -531,9 +541,9 @@ body > .content {
 			border-left: 26px solid $bg-header;
 			overflow: visible;
 			padding: 1px 8px;
-	
+
 			&:before {
-				color: $bg-spacer;
+				color: $bg-side-content;
 				font-size: 1em;
 				line-height: 0.7em;
 				width: 25px;
@@ -546,18 +556,18 @@ body > .content {
 				overflow: hidden;
 				content: code-line-numbers();
 			}
-			
+
 			code {
 				overflow: auto;
 			}
 		}
 	}
-	
+
 	// Info bar
 	& > .infobar {
 		margin: 0;
 	}
-	
+
 	// New comment
 	.new-comment {
 		.usertext-body {
@@ -574,7 +584,7 @@ a,
 	&:visited {
 		color: $fg-link;
 	}
-	
+
 	&:hover {
 		text-decoration: underline;
 	}
@@ -584,7 +594,7 @@ a,
 .content .reddit-link-title,
 #header #header-bottom-left .tabmenu li .choice,
 #header #sr-header-area a,
-.side .submit .morelink a {
+.side .morelink a {
 	&:hover {
 		text-decoration: none;
 	}
@@ -594,19 +604,19 @@ a,
 .footer-parent {
 	background-color: $bg-footer;
 	padding: 15px 0 0;
-	
+
 	&,
 	a {
 		color: $fg-header;
 	}
-	
+
 	& > .footer {
 		border: none;
-		
+
 		.col {
 			border-color: $br-footer;
 		}
-		
+
 		.title {
 			font-size: 14px;
 			font-weight: 700;
@@ -629,26 +639,26 @@ a,
 			.roundfield {
 				width: 100%;
 			}
-			
+
 			.roundfield {
 				border: 1px solid $br-info;
 				@include border-radius($brad-global);
-				
+
 				.usertext-edit {
 					width: 100%;
-					
+
 					.md {
 						max-width: 100%;
 					}
 				}
-				
+
 				input[type="text"],
 				input[type="url"] {
 					width: 100%;
 				}
 			}
 		}
-		
+
 		.infobar,
 		.info-notice {
 			width: 100%;
@@ -664,35 +674,35 @@ a,
 			width: 100%;
 			border: 1px solid $br-info;
 			@include border-radius($brad-global);
-			
+
 			.linefield-content {
 				padding: 0;
 			}
 		}
-		
+
 		.stylesheet-customize-container {
 			.sheets {
 				margin: 0;
 			}
-			
+
 			#preview-table {
 				table {
 					width: 100%;
 				}
 			}
 		}
-		
+
 		#sr-form {
 			.linefield {
 				.linefield-content {
 					.usertext-edit {
 						width: 100%;
-						
+
 						.md {
 							max-width: 100%;
 						}
 					}
-					
+
 					input[type="text"],
 					textarea {
 						width: 100%;
@@ -702,7 +712,7 @@ a,
 				}
 			}
 		}
-		
+
 		.flair-settings {
 			.linefield {
 				width: 100%;
@@ -710,12 +720,12 @@ a,
 				@include border-radius($brad-global);
 			}
 		}
-		
+
 		.tabpane-content {
 			padding: 0;
 			background-color: $bg-content-default;
 			@include border-radius($brad-global);
-			
+
 			.flairlist {
 				.flair-jump {
 					margin: 0;
@@ -732,26 +742,26 @@ a,
 	.searchpane {
 		margin: 0;
 		padding: 10px 20px;
-		
+
 		#search {
 			padding: 0;
-			
+
 			input[type="text"] {
 				min-width: 91.66667%; // .col-11
 				max-width: 91.66667%; // .col-11
 				padding: 5px 10px;
 			}
-			
+
 			.search-submit-button {
 				width: 7.33333%; // .col-1 - 1%
 			}
 		}
 	}
-	
+
 	.search-result-group {
 		max-width: 100%;
 		min-width: 100%;
-		
+
 		.search-result {
 			display: block;
 			background-color: $bg-post-odd;
@@ -760,13 +770,13 @@ a,
 			min-height: 75px;
 			border: 1px solid $br-sidebar;
 			@include border-radius($brad-global);
-			
+
 			&:nth-child(2n) {
 				background-color: $bg-post-even;
 			}
 		}
 	}
-	
+
 	.searchfacets {
 		min-width: 100%;
 		max-width: 100%;
@@ -785,7 +795,7 @@ a,
 			border-bottom: none;
 			margin: 0;
 		}
-		
+
 		& > .usertext {
 			border-top: none;
 			margin: 0 0 15px;
@@ -813,7 +823,7 @@ a,
 	.side {
 		width: 25%;	// .col-3
 	}
-	
+
 	body > .content {
 		width: 75%; // .col-9
 	}
@@ -823,7 +833,7 @@ a,
 	#header {
 		display: inline-block;
 		width: 100%;
-		
+
 		#header-bottom-right {
 			position: relative;
 		}
