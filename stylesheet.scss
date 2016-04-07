@@ -798,24 +798,24 @@ a,
 			min-height: 75px;
 			border: 1px solid $br-sidebar;
 			@include border-radius($brad-global);
-			
+
 			.search-expando {
 				.search-result-body {
 					padding: 0;
-					
+
 					.md {
 						max-width: 100%;
 					}
 				}
 			}
-			
+
 			.search-expando-button {
 				text-align: center;
 			}
 
 			&:nth-child(2n) {
 				background-color: $bg-post-even;
-				
+
 				.search-expando {
 					&.collapsed {
 						&::before {
