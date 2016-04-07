@@ -1,11 +1,15 @@
 /**
  * Clean Reddit Theme
  * GitHub <https://github.com/AlfredoRamos/clean-reddit-theme>
- * @version 0.3.1
+ * @version 0.3.2
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+ <https://www.gnu.org/licenses/gpl-3.0.txt>
  */
+
+//-------------------------------------------------------
+// VARIABLES
+//-------------------------------------------------------
 
 // Background colors
 $bg-body: #f1f1f1;
@@ -38,7 +42,10 @@ $brad-global: 2px;
 // Font family
 $font-family: Tahoma,Verdana,Segoe,sans-serif;
 
-// Mixins
+//-------------------------------------------------------
+// MIXINS
+//-------------------------------------------------------
+
 @mixin border-box {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -57,20 +64,16 @@ $font-family: Tahoma,Verdana,Segoe,sans-serif;
 	border-radius: $radius;
 }
 
-@mixin background-size($size) {
-	-webkit-background-size: $size;
-	-moz-background-size: $size;
-	-o-background-size: $size;
-	background-size: $size;
-}
-
 @mixin responsive($property, $breakpoint) {
 	@media only screen and (#{$property}: $breakpoint) {
 		@content;
 	}
 }
 
-// Functions
+//-------------------------------------------------------
+// FUNCTIONS
+//-------------------------------------------------------
+
 @function code-line-numbers($max: 300) {
 	$line-numbers: '';
 
@@ -91,7 +94,10 @@ $font-family: Tahoma,Verdana,Segoe,sans-serif;
 	@return $line-numbers;
 }
 
-// Global
+//-------------------------------------------------------
+// GLOBAL
+//-------------------------------------------------------
+
 * {
 	&,
 	&:before,
@@ -122,7 +128,10 @@ body {
 	}
 }
 
-// Header
+//-------------------------------------------------------
+// HEADER
+//-------------------------------------------------------
+
 #header {
 	background-color: $bg-header;
 	border: none;
@@ -256,7 +265,10 @@ body {
 	}
 }
 
-// Sidebar
+//-------------------------------------------------------
+// SIDEBAR
+//-------------------------------------------------------
+
 .side {
 	background-color: $bg-sidebar;
 	border-width: 0 0 1px 1px;
@@ -390,15 +402,6 @@ body {
 		}
 	}
 
-	.sidebox.create {
-		.spacer {
-			a {
-				background-position: 50%;
-				@include background-size(cover);
-			}
-		}
-	}
-
 	// Ads
 	.sponsorshipbox {
 		max-width: 100%;
@@ -425,7 +428,10 @@ body {
 	}
 }
 
-// Content
+//-------------------------------------------------------
+// CONTENT
+//-------------------------------------------------------
+
 body > .content,
 .side {
 	width: 100%;
@@ -600,7 +606,10 @@ a,
 	}
 }
 
-// Footer
+//-------------------------------------------------------
+// FOOTER
+//-------------------------------------------------------
+
 .footer-parent {
 	background-color: $bg-footer;
 	padding: 15px 0 0;
@@ -626,12 +635,18 @@ a,
 	}
 }
 
-// Debug info
+//-------------------------------------------------------
+// DEBUG
+//-------------------------------------------------------
+
 .debuginfo {
 	background-color: $bg-footer;
 }
 
-// Submit page
+//-------------------------------------------------------
+// SUBMIT PAGE
+//-------------------------------------------------------
+
 .submit-page {
 	.content {
 		.formtabs-content {
@@ -667,7 +682,10 @@ a,
 	}
 }
 
-// Moderation page
+//-------------------------------------------------------
+// MODERATION PAGE
+//-------------------------------------------------------
+
 .moderator {
 	.content {
 		.linefield {
@@ -737,7 +755,10 @@ a,
 	}
 }
 
-// Search page
+//-------------------------------------------------------
+// SEARCH PAGE
+//-------------------------------------------------------
+
 .search-page {
 	.searchpane {
 		margin: 0;
@@ -786,8 +807,10 @@ a,
 		@include border-radius($brad-global);
 	}
 }
+//-------------------------------------------------------
+// CONTENT FOR LOGGED USERS
+//-------------------------------------------------------
 
-// Content only when logged-in
 .loggedin > .content {
 	// Comments
 	.commentarea {
@@ -805,7 +828,10 @@ a,
 	}
 }
 
-// Mod tools page
+//-------------------------------------------------------
+// MOD TOOLS PAGE
+//-------------------------------------------------------
+
 .modtools-page {
 	& > div.content {
 		margin: 0;
@@ -813,12 +839,10 @@ a,
 	}
 }
 
-// What is this for?
-#hsts_pixel {
-	display: none;
-}
+//-------------------------------------------------------
+// RESPONSIVE
+//-------------------------------------------------------
 
-// Responsive
 @include responsive(min-width, 992px) {
 	.side {
 		width: 25%;	// .col-3
@@ -838,4 +862,12 @@ a,
 			position: relative;
 		}
 	}
+}
+
+//-------------------------------------------------------
+// UNKNOWN
+//-------------------------------------------------------
+
+#hsts_pixel {
+	display: none;
 }
