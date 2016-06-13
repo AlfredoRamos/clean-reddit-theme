@@ -1,3 +1,9 @@
+### Info
+
+The source of the stylesheet for my [/r/sddm_themes](https://reddit.com/r/sddm_themes) subreddit.
+
+An updated precompiled CSS file can be found at [clean-reddit-theme.css](https://gist.githubusercontent.com/AlfredoRamos/f491378eaf17b43eadf117fbb508289d/raw/ecd6d170affd0dc59f9f0580a0e6d24ee84194e9/clean-reddit-theme.css)
+
 ### Tools
 
 - SASS processor [[docs](http://sass-lang.com/install)]
@@ -5,10 +11,10 @@
 
 ### Build
 
-Using `sass`
+Using `sass` Ruby gem.
 
 ```shell
-sass -Ct compressed stylesheet.scss dist/stylesheet.css --sourcemap=none
+sass -Ct compressed style.scss style.css --sourcemap=none
 ```
 
 **Note:** The stylesheet must be always be compressed because of the reddit's 100 kb file limit. More info:
@@ -20,7 +26,7 @@ sass -Ct compressed stylesheet.scss dist/stylesheet.css --sourcemap=none
 
 ### Usage
 
-Copy the content of the generated `stylesheet.css` file to your reddit stylesheet customization page.
+Copy the content of the generated `style.css` file to your reddit stylesheet customization page.
 
 ```
 reddit.com/r/<YOUR_REDDIT>/about/stylesheet/
