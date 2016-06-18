@@ -1,4 +1,5 @@
 # encoding: UTF-8
+$stdout.sync = true
 
 class TestCase
   def initialize
@@ -25,6 +26,6 @@ class TestCase
   end
 
   def test_css_file
-    raise 'CSS file does not exist' if !File.exist?('style.css')
+    raise 'CSS file does not exist' if !File.exist?(@files[:output])
   end
 end
