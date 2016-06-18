@@ -9,9 +9,14 @@ class TestCase
   end
 
   def run_tests
-    self.methods.grep(/^test/).each do |m|
+    tests = self.methods.grep(/^test/)
+
+    tests.each do |m|
+      print '[%1$d/%2$d] Running %3$s... ' % [(tests.index(m) + 1), tests.length, m.to_s]
       self.send(m)
+      puts 'done'
     end
+
   end
 
   def test_sass_compilation
@@ -20,6 +25,6 @@ class TestCase
   end
 
   def test_css_file
-    raise 'CSS file does not exist' if !File.exist?(@files[:output])
+    raise 'CSS file does not exist' if !File.exist?('style.css')
   end
 end
