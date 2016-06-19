@@ -1,5 +1,5 @@
 # encoding: UTF-8
-$stdout.sync = true
+$stdout.sync = $stderr.sync = true
 
 class TestCase
   def initialize

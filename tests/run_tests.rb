@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # encoding: UTF-8
-$stdout.sync = true
+$stdout.sync = $stderr.sync = true
 
 require_relative 'test_case'
 
