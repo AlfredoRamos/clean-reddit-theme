@@ -1,7 +1,7 @@
 /**
  * Clean Reddit Theme
  * https://github.com/AlfredoRamos/clean-reddit-theme
- * @version 1.0.0
+ * @version 1.0.1
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+
@@ -24,9 +24,9 @@ $bg-submit-link: #69c;
 $bg-subscribe: #9c9;
 $bg-unsubscribe: #f2777a;
 $bg-content-default: #cee3f8;
+$bg-tab: #777;
 
 // Foreground colors
-$fg-header: #777;
 $fg-header-title: #fafafa;
 $fg-link: #0072bc;
 
@@ -133,6 +133,11 @@ body {
 		min-height: 100px;
 		max-height: 300px;
 	}
+
+	input[type="radio"],
+	input[type="checkbox"] {
+		vertical-align: text-bottom;
+	}
 }
 
 //-------------------------------------------------------
@@ -148,7 +153,7 @@ body {
 		border: none;
 
 		a {
-			color: $fg-header;
+			color: $br-sidebar;
 
 			&:hover {
 				color: $bg-sidebar;
@@ -181,13 +186,14 @@ body {
 			#sr-more-link {
 				background-color: $bg-header-right;
 				color: $bg-sidebar;
+				font-weight: normal;
 			}
 		}
 	}
 
 	#header-bottom-left {
 		background-color: transparent;
-		color: $fg-header;
+		color: $bg-tab;
 
 		a {
 			color: $bg-sidebar;
@@ -216,22 +222,22 @@ body {
 
 				.choice {
 					background-color: $bg-header-right;
-					font-weight: 500;
+					font-weight: normal;
 					padding: 2px 5px;
 					margin: 0 2px;
 					@include border-radius($brad-global);
 
 					&:hover {
-						background-color: $fg-header;
+						background-color: $bg-tab;
 					}
 				}
 
 				&.selected {
 					.choice {
-						font-weight: 700;
+						font-weight: bold;
 						border: none;
 						color: $bg-post-odd;
-						background-color: $fg-header;
+						background-color: $bg-tab;
 					}
 				}
 			}
@@ -249,12 +255,12 @@ body {
 		}
 
 		.separator {
-			color: $fg-header;
+			color: $bg-tab;
 		}
 
 		.user {
 			a {
-				font-weight: 700;
+				font-weight: bold;
 			}
 		}
 
@@ -365,7 +371,7 @@ body {
 			border-color: $bg-sidebar;
 
 			h1 {
-				font-weight: 700;
+				font-weight: bold;
 				font-size: 13px;
 				line-height: 16px;
 				color: $bg-header;
@@ -390,9 +396,9 @@ body {
 		}
 
 		.subscribe-button {
-			.add,
-			.remove {
+			.option {
 				background-image: none;
+				border-color: transparent;
 			}
 
 			.add {
@@ -431,7 +437,7 @@ body {
 		display: block;
 		text-align: center;
 		margin: 15px 0 10px;
-		color: $fg-header;
+		color: $bg-tab;
 	}
 }
 
@@ -654,7 +660,7 @@ a,
 
 	&,
 	a {
-		color: $fg-header;
+		color: $bg-tab;
 	}
 
 	& > .footer {
@@ -666,7 +672,7 @@ a,
 
 		.title {
 			font-size: 14px;
-			font-weight: 700;
+			font-weight: bold;
 			text-transform: capitalize;
 			color: $fg-header-title;
 		}
