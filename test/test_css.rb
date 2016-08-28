@@ -19,10 +19,6 @@ class TestCss < Minitest::Test
       @files[:output]
     ])
 
-    puts 'Exit code: %d' % $?.to_i
-    puts 'Input exists: %s' % File.exist?(@files[:input])
-    puts 'Output exists: %s' % File.exist?(@files[:output])
-
     assert_same(0, $?.to_i)
   end
 
