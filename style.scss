@@ -1,7 +1,7 @@
 /**
  * Clean Reddit Theme
  * https://github.com/AlfredoRamos/clean-reddit-theme
- * @version 1.0.1
+ * @version 1.0.2
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+
@@ -29,6 +29,8 @@ $bg-tab: #777;
 // Foreground colors
 $fg-header-title: #fafafa;
 $fg-link: #0072bc;
+$fg-footer-gold: #9a7d2e;
+$fg-footer-updated: #959595;
 
 // Border colors
 $br-sidebar: #d6d6d6;
@@ -298,6 +300,17 @@ body {
 		}
 	}
 
+	#searchexpando,
+	.linkinfo {
+		@include border-radius($brad-global);
+	}
+
+	#searchexpando {
+		input[name="restrict_sr"] {
+			margin-bottom: 0;
+		}
+	}
+
 	// Login form
 	.login-form-side {
 		border: none;
@@ -455,6 +468,29 @@ body > .content,
 }
 
 body > .content {
+	// Global
+	.infobar,
+	.info-notice,
+	.reddit-infobar {
+		@include border-radius($brad-global);
+
+		a {
+			& {
+				text-decoration: none;
+			}
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.infobar,
+	.info-notice {
+		width: 100%;
+		text-align: center;
+	}
+
 	// Post/Comment list
 	.linklisting,
 	.commentarea {
@@ -679,7 +715,11 @@ a,
 	}
 
 	.buygold {
-		color: #9a7d2e;
+		color: $fg-footer-gold;
+	}
+
+	.updated {
+		color: $fg-footer-updated;
 	}
 }
 
@@ -722,11 +762,6 @@ a,
 			}
 		}
 
-		.infobar,
-		.info-notice {
-			width: 100%;
-			text-align: center;
-		}
 	}
 }
 
