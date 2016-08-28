@@ -305,6 +305,20 @@ body {
 		@include border-radius($brad-global);
 	}
 
+	.linkinfo {
+		text-align: center;
+
+		.shortlink {
+			font-size: 0;
+
+			#shortlink-text {
+				width: 100%;
+				text-align: center;
+				font-size: 10.5px;
+			}
+		}
+	}
+
 	#searchexpando {
 		input[name="restrict_sr"] {
 			margin-bottom: 0;
@@ -476,11 +490,11 @@ body > .content {
 
 		a {
 			& {
-				text-decoration: none;
+				text-decoration: none !important;
 			}
 
 			&:hover {
-				text-decoration: underline;
+				text-decoration: underline !important;
 			}
 		}
 	}
@@ -569,6 +583,8 @@ body > .content {
 			width: 100%;
 			margin: 0 0 15px;
 			text-align: center;
+			padding: 4px 8px;
+			@include border-radius($brad-global);
 		}
 
 		&,
