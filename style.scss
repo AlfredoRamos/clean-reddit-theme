@@ -1,7 +1,7 @@
 /**
  * Clean Reddit Theme
  * https://github.com/AlfredoRamos/clean-reddit-theme
- * @version 1.0.3
+ * @version 1.0.4
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+
@@ -218,15 +218,16 @@ body {
 		}
 
 		.tabmenu {
+			margin-bottom: -5px;
+
 			li {
 				display: inline-block;
-				margin: 0;
+				margin: 0 2px 8px;
 
 				.choice {
 					background-color: $bg-header-right;
 					font-weight: normal;
 					padding: 2px 5px;
-					margin: 0 2px;
 					@include border-radius($brad-global);
 
 					&:hover {
@@ -711,6 +712,10 @@ a,
 
 		.col {
 			border-color: $br-footer;
+
+			.flat-vert {
+				text-align: center;
+			}
 		}
 
 		.title {
@@ -978,8 +983,30 @@ a,
 		display: inline-block;
 		width: 100%;
 
+		#header-bottom-left {
+			.tabmenu {
+				white-space: normal;
+				margin-left: 3px;
+				margin-right: 3px;
+			}
+		}
+
 		#header-bottom-right {
 			position: relative;
+		}
+	}
+
+	.footer-parent {
+		& > .footer {
+			display: block;
+
+			.col {
+				width: 50%;
+
+				&:nth-child(2n+1) {
+					border-left: none;
+				}
+			}
 		}
 	}
 }
