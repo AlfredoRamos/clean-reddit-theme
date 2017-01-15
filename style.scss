@@ -8,103 +8,14 @@
  */
 
 //-------------------------------------------------------
-// VARIABLES
+// RESOURCES
 //-------------------------------------------------------
-
-// Background colors
-$bg-body: #f1f1f1;
-$bg-header: #2d2d2d;
-$bg-header-right: #515151;
-$bg-footer: #393939;
-$bg-sidebar: #ededed;
-$bg-side-content: #fff;
-$bg-post-odd: #fcfcfc;
-$bg-post-even: #f8f8f8;
-$bg-submit-link: #69c;
-$bg-subscribe: #9c9;
-$bg-unsubscribe: #f2777a;
-$bg-content-default: #cee3f8;
-$bg-tab: #777;
-
-// Foreground colors
-$fg-header-title: #fafafa;
-$fg-link: #0072bc;
-$fg-footer-gold: #9a7d2e;
-$fg-footer-updated: #959595;
-
-// Border colors
-$br-sidebar: #d6d6d6;
-$br-footer: #555;
-$br-sidebox: #e2e2e2;
-$br-info: #5f99cf;
-
-// Border radius
-$brad-global: 2px;
-
-// Font family
-$font-family: Tahoma,Verdana,Segoe,sans-serif;
+@import 'variables';
+@import 'functions';
+@import 'mixins';
 
 //-------------------------------------------------------
-// MIXINS
-//-------------------------------------------------------
-
-@mixin border-box {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-
-@mixin box-shadow($shadow) {
-	-webkit-box-shadow: $shadow;
-	-moz-box-shadow: $shadow;
-	box-shadow: $shadow;
-}
-
-@mixin border-radius($radius) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius: $radius;
-	border-radius: $radius;
-}
-
-@mixin linear-gradient($direction, $color-stop...) {
-	background: -webkit-linear-gradient($direction, $color-stop);
-	background: -moz-linear-gradient($direction, $color-stop);
-	background: -o-linear-gradient($direction, $color-stop);
-	background: linear-gradient($direction, $color-stop);
-}
-
-@mixin responsive($property, $breakpoint) {
-	@media only screen and (#{$property}: $breakpoint) {
-		@content;
-	}
-}
-
-//-------------------------------------------------------
-// FUNCTIONS
-//-------------------------------------------------------
-
-@function code-line-numbers($max: 300) {
-	$line-numbers: '';
-
-	@for $n from 1 through $max {
-		@if $n == 1 {
-			$line-numbers: '#{$n}';
-		} @else {
-			@if $n < 10 {
-				$line-numbers: '#{$line-numbers}   #{$n}';
-			} @else if $n >= 10 and $n < 100 {
-				$line-numbers: '#{$line-numbers}  #{$n}';
-			} @else {
-				$line-numbers: '#{$line-numbers} #{$n}';
-			}
-		}
-	}
-
-	@return $line-numbers;
-}
-
-//-------------------------------------------------------
-// GLOBAL
+// IMPLEMENTATION
 //-------------------------------------------------------
 
 * {

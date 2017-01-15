@@ -1,0 +1,38 @@
+// Set border-box to the box-sizing property
+@mixin border-box {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+// Set value to the box-shadow property
+@mixin box-shadow($shadow) {
+	-webkit-box-shadow: $shadow;
+	-moz-box-shadow: $shadow;
+	box-shadow: $shadow;
+}
+
+// Set value to the border-radius property
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+// Set a linear gradient
+@mixin linear-gradient($direction, $color-stop...) {
+	background: -webkit-linear-gradient($direction, $color-stop);
+	background: -moz-linear-gradient($direction, $color-stop);
+	background: -o-linear-gradient($direction, $color-stop);
+	background: linear-gradient($direction, $color-stop);
+}
+
+// Define a media query to set style rules depending
+// on the device's viewport
+// @param	$viewport	The visible area of the screen
+// @param	$size		The viewport size
+@mixin responsive($viewport, $size) {
+	@media only screen and (#{$viewport}: $size) {
+		@content;
+	}
+}
