@@ -3,9 +3,11 @@ require 'minitest/autorun'
 class TestCss < Minitest::Test
 
   def setup
+    Dir.mkdir('build') unless Dir.exist?('build')
+
     @files = {
-      :input  => 'style.scss',
-      :output => 'style.css'
+      :input  => 'scss/style.scss',
+      :output => 'build/style.css'
     }
   end
 
