@@ -1,4 +1,4 @@
-### Info
+### About
 
 The source of the stylesheet for my [/r/sddm_themes](https://reddit.com/r/sddm_themes) subreddit.
 
