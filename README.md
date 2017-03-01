@@ -20,7 +20,7 @@ mkdir build
 sass -Ct compressed scss/style.scss build/style.css --sourcemap=none
 ```
 
-**Note:** The stylesheet must be always be compressed because of the reddit's 100 kb file limit. More info:
+**Note:** The stylesheet must always be compressed because of the reddit's 100 kb file limit. References:
 
 - https://redd.it/2mv7vu
 - https://redd.it/3cmm0d

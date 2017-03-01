@@ -1,7 +1,7 @@
 /**
  * Clean Reddit Theme
  * https://github.com/AlfredoRamos/clean-reddit-theme
- * @version 1.0.4
+ * @version 1.0.5
  * @author Alfredo Ramos <alfredo.ramos@yandex.com>
  * @copyright (c) 2016 Alfredo Ramos
  * @license GNU GPL-3.0+
@@ -11,7 +11,6 @@
 // RESOURCES
 //-------------------------------------------------------
 @import 'partials/variables';
-@import 'partials/functions';
 @import 'partials/mixins';
 
 //-------------------------------------------------------
@@ -504,35 +503,6 @@ body > .content {
 		.child {
 			.thing {
 				background-color: $bg-post-even;
-			}
-		}
-	}
-
-	// Code blocks with line numbers
-	.md {
-		pre {
-			position: relative;
-			border-left: 26px solid $bg-header;
-			overflow: visible;
-			padding: 1px 8px;
-
-			&:before {
-				color: $bg-side-content;
-				font-size: 1em;
-				line-height: 0.7em;
-				width: 25px;
-				height: 100%;
-				position: absolute;
-				top: 6px;
-				left: -28px;
-				white-space: pre-wrap;
-				direction: rtl;
-				overflow: hidden;
-				content: code-line-numbers();
-			}
-
-			code {
-				overflow: auto;
 			}
 		}
 	}
