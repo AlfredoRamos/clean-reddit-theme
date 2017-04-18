@@ -1,0 +1,29 @@
+.submit-page {
+	.content {
+		.formtabs-content {
+			&,
+			.roundfield {
+				width: 100%;
+			}
+
+			.roundfield {
+				border: 1px solid $br-info;
+				@include border-radius($brad-global);
+
+				.usertext-edit {
+					width: 100%;
+
+					.md {
+						max-width: 100%;
+					}
+				}
+
+				input[type="text"],
+				input[type="url"] {
+					width: 100%;
+				}
+			}
+		}
+
+	}
+}

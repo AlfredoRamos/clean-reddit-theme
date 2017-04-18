@@ -1,0 +1,23 @@
+.nav-buttons {
+	.nextprev {
+		a {
+			&,
+			&:hover,
+			&:visited {
+				background-color: $bg-submit-link;
+				text-decoration: none;
+				border: none;
+				@include border-radius($brad-global);
+			}
+
+			&,
+			&:visited {
+				color: $bg-sidebar;
+			}
+
+			&:hover {
+				color: $bg-side-content;
+			}
+		}
+	}
+}

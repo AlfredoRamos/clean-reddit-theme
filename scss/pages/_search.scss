@@ -1,0 +1,78 @@
+.search-page {
+	.searchpane {
+		margin: 0;
+		padding: 10px 20px;
+
+		#search {
+			padding: 0;
+
+			input[type="text"] {
+				min-width: 91.66667%; // .col-11
+				max-width: 91.66667%; // .col-11
+				padding: 5px 10px;
+			}
+
+			.search-submit-button {
+				width: 7.33333%; // .col-1 - 1%
+			}
+		}
+	}
+
+	.search-result-group {
+		max-width: 100%;
+		min-width: 100%;
+
+		.search-result {
+			display: block;
+			background-color: $bg-post-odd;
+			padding: 2px 5px;
+			margin: 0 0 5px;
+			min-height: 75px;
+			border: 1px solid $br-sidebar;
+			@include border-radius($brad-global);
+
+			.search-expando {
+				.search-result-body {
+					padding: 0;
+
+					.md {
+						max-width: 100%;
+					}
+				}
+			}
+
+			.search-expando-button {
+				text-align: center;
+			}
+
+			&:nth-child(2n) {
+				background-color: $bg-post-even;
+
+				.search-expando {
+					&.collapsed {
+						&::before {
+							@include linear-gradient(to bottom, transparent 0%, $bg-post-even 100%);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.searchfacets {
+		min-width: 100%;
+		max-width: 100%;
+		padding: 5px 10px;
+		background-color: $bg-post-even;
+		border-color: $br-sidebox;
+		@include border-radius($brad-global);
+	}
+
+	.search-summary {
+		margin: 0 20px;
+
+		.debuginfo {
+			background-color: transparent;
+		}
+	}
+}

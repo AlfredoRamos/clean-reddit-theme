@@ -1,0 +1,16 @@
+.loggedin > .content {
+	// Comments
+	.commentarea {
+		.menuarea {
+			border-bottom: none;
+			margin: 0;
+		}
+
+		& > .usertext {
+			border-top: none;
+			margin: 0 0 15px;
+			border-bottom-width: 1px;
+			@include border-radius(0 0 $brad-global $brad-global);
+		}
+	}
+}

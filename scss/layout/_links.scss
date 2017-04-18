@@ -1,0 +1,21 @@
+a,
+.content .thing .title {
+	&,
+	&:visited {
+		color: $fg-link;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+.content .thing .title,
+.content .reddit-link-title,
+#header #header-bottom-left .tabmenu li .choice,
+#header #sr-header-area a,
+.side .morelink a {
+	&:hover {
+		text-decoration: none;
+	}
+}

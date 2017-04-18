@@ -1,0 +1,50 @@
+.footer-parent {
+	background-color: $bg-footer;
+	padding: 15px 0 0;
+
+	&,
+	a {
+		color: $bg-tab;
+	}
+
+	& > .footer {
+		border: none;
+
+		// Responsive
+		@include responsive(max-width, ($res-breakpoint - 1)) {
+			display: block;
+		}
+
+		.col {
+			border-color: $br-footer;
+
+			// Responsive
+			@include responsive(max-width, ($res-breakpoint - 1)) {
+				width: 50%;
+
+				&:nth-child(2n+1) {
+					border-left: none;
+				}
+			}
+
+			.flat-vert {
+				text-align: center;
+			}
+		}
+
+		.title {
+			font-size: 14px;
+			font-weight: bold;
+			text-transform: capitalize;
+			color: $fg-header-title;
+		}
+	}
+
+	.buygold {
+		color: $fg-footer-gold;
+	}
+
+	.updated {
+		color: $fg-footer-updated;
+	}
+}

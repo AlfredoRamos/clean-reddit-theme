@@ -1,0 +1,152 @@
+#header {
+	background-color: $bg-header;
+	border: none;
+
+	// Responsive
+	@include responsive(max-width, ($res-breakpoint - 1)) {
+		display: inline-block;
+		width: 100%;
+	}
+
+	#sr-header-area {
+		background-color: $bg-footer;
+		border: none;
+
+		a {
+			color: $br-sidebar;
+
+			&:hover {
+				color: $bg-sidebar;
+			}
+		}
+
+		.width-clip {
+			.dropdown {
+				.selected {
+					color: $bg-sidebar;
+				}
+			}
+
+			.drop-choices {
+				background-color: $bg-footer;
+				@include border-radius($brad-global);
+
+				.choice {
+					&:hover {
+						background-color: $bg-header-right;
+					}
+				}
+
+				&,
+				.bottom-option {
+					border-color: $bg-header-right;
+				}
+			}
+
+			#sr-more-link {
+				background-color: $bg-header-right;
+				color: $bg-sidebar;
+				font-weight: normal;
+			}
+		}
+	}
+
+	#header-bottom-left {
+		background-color: transparent;
+		color: $bg-tab;
+
+		a {
+			color: $bg-sidebar;
+
+			&:hover {
+				color: $bg-post-even;
+			}
+		}
+
+		#header-img-a {
+			#header-img {
+				vertical-align: middle;
+				margin: 2px 5px 5px;
+			}
+		}
+
+		.redditname,
+		.tabmenu {
+			vertical-align: middle;
+		}
+
+		.tabmenu {
+			margin-bottom: -5px;
+
+			// Responsive
+			@include responsive(max-width, ($res-breakpoint - 1)) {
+				white-space: normal;
+				margin-left: 3px;
+				margin-right: 3px;
+			}
+
+			li {
+				display: inline-block;
+				margin: 0 2px 8px;
+
+				.choice {
+					background-color: $bg-header-right;
+					font-weight: normal;
+					padding: 2px 5px;
+					@include border-radius($brad-global);
+
+					&:hover {
+						background-color: $bg-tab;
+					}
+				}
+
+				&.selected {
+					.choice {
+						font-weight: bold;
+						border: none;
+						color: $bg-post-odd;
+						background-color: $bg-tab;
+					}
+				}
+			}
+		}
+	}
+
+	#header-bottom-right {
+		background-color: $bg-header-right;
+		margin: 5px;
+		@include border-radius($brad-global);
+
+		// Responsive
+		@include responsive(max-width, ($res-breakpoint - 1)) {
+			position: relative;
+		}
+
+		&,
+		.user {
+			color: $br-sidebox;
+		}
+
+		.separator {
+			color: $bg-tab;
+		}
+
+		.user {
+			a {
+				font-weight: bold;
+			}
+		}
+
+		a {
+			color: $bg-sidebar;
+
+			&:hover {
+				color: $bg-post-even;
+			}
+		}
+
+		.userkarma {
+			color: $fg-header-title;
+		}
+	}
+}

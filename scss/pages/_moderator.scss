@@ -1,0 +1,68 @@
+.moderator {
+	.content {
+		.linefield {
+			width: 100%;
+			border: 1px solid $br-info;
+			@include border-radius($brad-global);
+
+			.linefield-content {
+				padding: 0;
+			}
+		}
+
+		.stylesheet-customize-container {
+			.sheets {
+				margin: 0;
+			}
+
+			#preview-table {
+				table {
+					width: 100%;
+				}
+			}
+		}
+
+		#sr-form {
+			.linefield {
+				.linefield-content {
+					.usertext-edit {
+						width: 100%;
+
+						.md {
+							max-width: 100%;
+						}
+					}
+
+					input[type="text"],
+					textarea {
+						width: 100%;
+						border-color: $bg-header;
+						@include box-shadow(none);
+					}
+				}
+			}
+		}
+
+		.flair-settings {
+			.linefield {
+				width: 100%;
+				border: 1px solid $br-info;
+				@include border-radius($brad-global);
+			}
+		}
+
+		.tabpane-content {
+			padding: 0;
+			background-color: $bg-content-default;
+			@include border-radius($brad-global);
+
+			.flairlist {
+				.flair-jump {
+					margin: 0;
+					border: none;
+					background-color: transparent;
+				}
+			}
+		}
+	}
+}

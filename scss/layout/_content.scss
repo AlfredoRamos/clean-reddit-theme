@@ -1,0 +1,151 @@
+body > .content,
+.side {
+	width: 100%;
+	display: inline-block;
+	margin: 0 0 15px;
+	padding: 5px 10px;
+	overflow: hidden;
+}
+
+body > .content {
+	// Responsive
+	@include responsive(min-width, $res-breakpoint) {
+		width: 75%; // .col-md-9
+	}
+
+	// Global
+	.infobar,
+	.info-notice,
+	.reddit-infobar {
+		@include border-radius($brad-global);
+
+		a {
+			& {
+				text-decoration: none !important;
+			}
+
+			&:hover {
+				text-decoration: underline !important;
+			}
+		}
+	}
+
+	.infobar,
+	.info-notice {
+		width: 100%;
+		text-align: center;
+	}
+
+	// Post/Comment list
+	.linklisting,
+	.commentarea {
+		// Post/Comment
+		.thing {
+			display: block;
+			background-color: $bg-post-odd;
+			padding: 2px 5px;
+			margin: 0 0 5px;
+			border: 1px solid $br-sidebar;
+			@include border-radius($brad-global);
+		}
+	}
+
+	// Posts
+	.linklisting {
+		.thing {
+			&.even {
+				background-color: $bg-post-even;
+			}
+		}
+	}
+
+	// Comments
+	.commentarea {
+		.panestack-title,
+		.menuarea,
+		& > .usertext {
+			background-color: $bg-post-even;
+			padding-left: 10px;
+			padding-right: 10px;
+			border-style: solid;
+			border-color: $br-sidebox;
+			border-left-width: 1px;
+			border-right-width: 1px;
+		}
+
+		.panestack-title,
+		.menuarea {
+			margin: 0;
+		}
+
+		.panestack-title {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			border-top-width: 1px;
+			@include border-radius($brad-global $brad-global 0 0);
+		}
+
+		.menuarea {
+			border-top: none;
+			margin: 0 0 15px;
+			padding: 4px 8px;
+			border-bottom-width: 1px;
+			@include border-radius(0 0 $brad-global $brad-global);
+		}
+
+		.usertext {
+			.usertext-edit {
+				width: 100%;
+
+				.md {
+					width: 100%;
+					max-width: 100%;
+
+					&,
+					textarea {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.comment-visits-box {
+			max-width: 100%;
+			width: 100%;
+			margin: 0 0 15px;
+			text-align: center;
+			padding: 4px 8px;
+			@include border-radius($brad-global);
+		}
+
+		&,
+		.sitetable {
+			background-color: transparent;
+			margin: 5px 0 0;
+
+			#noresults {
+				margin: 0;
+				text-align: center;
+			}
+		}
+
+		.child {
+			.thing {
+				background-color: $bg-post-even;
+			}
+		}
+	}
+
+	// Info bar
+	& > .infobar {
+		margin: 0;
+	}
+
+	// New comment
+	.new-comment {
+		.usertext-body {
+			background-color: transparent;
+			border: none;
+		}
+	}
+}
