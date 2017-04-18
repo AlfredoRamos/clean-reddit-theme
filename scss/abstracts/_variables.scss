@@ -1,4 +1,5 @@
-// Background colors
+/// Background colors
+/// @type	color
 $bg-body: #f1f1f1;
 $bg-header: #2d2d2d;
 $bg-header-right: #515151;
@@ -14,22 +15,27 @@ $bg-content-default: #cee3f8;
 $bg-tab: #777;
 
 // Foreground colors
+/// @type	color
 $fg-header-title: #fafafa;
 $fg-link: #0072bc;
 $fg-footer-gold: #9a7d2e;
 $fg-footer-updated: #959595;
 
-// Border colors
+/// Border colors
+/// @type	color
 $br-sidebar: #d6d6d6;
 $br-footer: #555;
 $br-sidebox: #e2e2e2;
 $br-info: #5f99cf;
 
-// Border radius
+/// Border radius
+/// @type	number
 $brad-global: 2px;
 
-// Font family
+/// Font family
+/// @type	list
 $font-family: Tahoma,Verdana,Segoe,sans-serif;
 
-// Breakpoint
+/// Breakpoint
+/// @type	number
 $res-breakpoint: 992px;
