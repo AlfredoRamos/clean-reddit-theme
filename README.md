@@ -4,7 +4,7 @@ The source of the stylesheet for my [/r/sddm_themes](https://reddit.com/r/sddm_t
 
 [![Build Status](https://img.shields.io/travis/AlfredoRamos/clean-reddit-theme.svg?style=flat-square&maxAge=3600)](https://travis-ci.org/AlfredoRamos/clean-reddit-theme) [![Latest Stable Version](https://img.shields.io/github/tag/AlfredoRamos/clean-reddit-theme.svg?style=flat-square&label=stable&maxAge=3600)](https://github.com/AlfredoRamos/clean-reddit-theme/releases) [![License](https://img.shields.io/github/license/AlfredoRamos/clean-reddit-theme.svg?style=flat-square)](https://raw.githubusercontent.com/AlfredoRamos/clean-reddit-theme/master/LICENSE)
 
-An updated precompiled CSS file can be found at [clean-reddit-theme.css](https://gist.github.com/AlfredoRamos/f491378eaf17b43eadf117fbb508289d)
+A precompiled CSS file (`clean-reddit-theme`) can be found in [this gist](https://gist.github.com/AlfredoRamos/f491378eaf17b43eadf117fbb508289d)
 
 ### Tools
 
@@ -17,7 +17,7 @@ Using `sass` Ruby gem.
 
 ```shell
 mkdir build
-sass -Ct compressed scss/style.scss build/style.css --sourcemap=none
+sass -Ct compressed scss/main.scss build/style.css --sourcemap=none
 ```
 
 **Note:** The stylesheet must always be compressed because of the reddit's 100 kb file limit. References:
