@@ -4,7 +4,7 @@ The source of the stylesheet for my [/r/sddm_themes](https://reddit.com/r/sddm_t
 
 [![Build Status](https://img.shields.io/travis/AlfredoRamos/clean-reddit-theme.svg?style=flat-square&maxAge=3600)](https://travis-ci.org/AlfredoRamos/clean-reddit-theme) [![Latest Stable Version](https://img.shields.io/github/tag/AlfredoRamos/clean-reddit-theme.svg?style=flat-square&label=stable&maxAge=3600)](https://github.com/AlfredoRamos/clean-reddit-theme/releases) [![License](https://img.shields.io/github/license/AlfredoRamos/clean-reddit-theme.svg?style=flat-square)](https://raw.githubusercontent.com/AlfredoRamos/clean-reddit-theme/master/LICENSE)
 
-A precompiled CSS file (`clean-reddit-theme`) can be found in [this gist](https://gist.github.com/AlfredoRamos/f491378eaf17b43eadf117fbb508289d)
+A precompiled CSS file (`clean-reddit-theme.css`) can be found in [this gist](https://gist.github.com/AlfredoRamos/f491378eaf17b43eadf117fbb508289d).
 
 ### Tools
 
