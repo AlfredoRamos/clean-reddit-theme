@@ -62,17 +62,10 @@
 	.searchfacets {
 		min-width: 100%;
 		max-width: 100%;
-		padding: 5px 10px;
+		margin: 0;
+		padding: 10px 20px;
 		background-color: $bg-post-even;
 		border-color: $br-sidebox;
 		@include border-radius($brad-global);
-	}
-
-	.search-summary {
-		margin: 0 20px;
-
-		.debuginfo {
-			background-color: transparent;
-		}
 	}
 }
