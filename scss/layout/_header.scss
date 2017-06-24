@@ -1,4 +1,5 @@
 #header {
+	background-image: url(%%header-background%%);
 	background-color: $bg-header;
 	border: none;
 
@@ -13,17 +14,17 @@
 		border: none;
 
 		a {
-			color: $br-sidebar;
+			color: $br-content;
 
 			&:hover {
-				color: $bg-sidebar;
+				color: $fg-link-light;
 			}
 		}
 
 		.width-clip {
 			.dropdown {
 				.selected {
-					color: $bg-sidebar;
+					color: $fg-link-light;
 				}
 			}
 
@@ -45,7 +46,7 @@
 
 			#sr-more-link {
 				background-color: $bg-header-right;
-				color: $bg-sidebar;
+				color: $fg-link-light;
 				font-weight: normal;
 			}
 		}
@@ -56,7 +57,7 @@
 		color: $bg-tab;
 
 		a {
-			color: $bg-sidebar;
+			color: $fg-link-light;
 
 			&:hover {
 				color: $bg-post-even;
@@ -138,7 +139,7 @@
 		}
 
 		a {
-			color: $bg-sidebar;
+			color: $fg-link-light;
 
 			&:hover {
 				color: $bg-post-even;

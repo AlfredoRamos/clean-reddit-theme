@@ -45,7 +45,7 @@ body > .content {
 			background-color: $bg-post-odd;
 			padding: 2px 5px;
 			margin: 0 0 5px;
-			border: 1px solid $br-sidebar;
+			border: 1px solid $br-content;
 			@include border-radius($brad-global);
 		}
 	}
