@@ -32,7 +32,7 @@ sass -Ct compressed scss/main.scss build/style.css --sourcemap=none
 Copy the content of the generated `style.css` file to your reddit stylesheet customization page.
 
 ```
-reddit.com/r/<YOUR_REDDIT>/about/stylesheet/
+reddit.com/r/{YOUR_REDDIT}/about/stylesheet/
 ```
 
 Making a smaller `PNG` image using GraphicsMagick command line tool:
