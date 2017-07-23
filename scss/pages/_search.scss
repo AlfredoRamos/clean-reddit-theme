@@ -57,6 +57,23 @@
 				}
 			}
 		}
+
+		.search-result-subreddit {
+			.search-subscribe-button {
+				.option {
+					background-image: none;
+					border-color: transparent;
+				}
+
+				.add {
+					background-color: $bg-subscribe;
+				}
+
+				.remove {
+					background-color: $bg-unsubscribe;
+				}
+			}
+		}
 	}
 
 	.searchfacets {
