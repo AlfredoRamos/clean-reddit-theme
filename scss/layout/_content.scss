@@ -62,7 +62,8 @@ body > .content {
 			}
 
 			.rank,
-			.midcol.likes {
+			.midcol.likes,
+			.midcol.unvoted {
 				height: 70px;
 				display: flex;
 				flex-direction: column;
