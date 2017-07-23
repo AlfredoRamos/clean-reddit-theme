@@ -56,6 +56,19 @@ body > .content {
 			&.even {
 				background-color: $bg-post-even;
 			}
+
+			.rank {
+				margin-top: 0;
+			}
+
+			.rank,
+			.midcol.likes {
+				height: 70px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				text-align: center;
+			}
 		}
 	}
 
