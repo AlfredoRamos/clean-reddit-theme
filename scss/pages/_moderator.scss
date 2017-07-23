@@ -64,5 +64,17 @@
 				}
 			}
 		}
+
+		#noresults {
+			margin: 0;
+		}
+
+		.thing {
+			.usertext-body {
+				.md {
+					max-width: 100%;
+				}
+			}
+		}
 	}
 }
