@@ -5,8 +5,7 @@
 
 		// Rules
 		.subreddit-rules-page {
-			max-width: 100%;
-
+			&,
 			& > #subreddit-rule-add-form {
 				max-width: 100%;
 			}
