@@ -10,14 +10,14 @@ body > .content,
 body > .content {
 	// Responsive
 	@include responsive(min-width, $res-breakpoint) {
-		width: 75%; // .col-md-9
+		width: percentage(9/12); // .col-9
 	}
 
 	// Global
 	.infobar,
 	.info-notice,
 	.reddit-infobar {
-		@include border-radius($brad-global);
+		border-radius: $brad-global;
 
 		a {
 			& {
@@ -46,7 +46,7 @@ body > .content {
 			padding: 2px 5px;
 			margin: 0 0 5px;
 			border: 1px solid $br-content;
-			@include border-radius($brad-global);
+			border-radius: $brad-global;
 		}
 	}
 
@@ -96,7 +96,7 @@ body > .content {
 			padding-top: 5px;
 			padding-bottom: 5px;
 			border-top-width: 1px;
-			@include border-radius($brad-global $brad-global 0 0);
+			border-radius: $brad-global $brad-global 0 0;
 		}
 
 		.menuarea {
@@ -104,7 +104,7 @@ body > .content {
 			margin: 0 0 15px;
 			padding: 4px 8px;
 			border-bottom-width: 1px;
-			@include border-radius(0 0 $brad-global $brad-global);
+			border-radius: 0 0 $brad-global $brad-global;
 		}
 
 		.usertext {
@@ -129,7 +129,7 @@ body > .content {
 			margin: 0 0 15px;
 			text-align: center;
 			padding: 4px 8px;
-			@include border-radius($brad-global);
+			border-radius: $brad-global;
 		}
 
 		&,

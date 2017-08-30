@@ -10,6 +10,9 @@ branches:
   only:
     - master
 
+cache:
+  bundler: true
+
 before_install:
   - gem update --system
   - gem update --no-document

@@ -6,18 +6,34 @@ The source of the stylesheet for my [/r/sddm_themes](https://reddit.com/r/sddm_t
 
 A precompiled CSS file (`clean-reddit-theme.css`) can be found in [this gist](https://gist.github.com/AlfredoRamos/f491378eaf17b43eadf117fbb508289d).
 
-### Tools
+### Dependencies
 
-- SASS processor [[docs](http://sass-lang.com/install)]
-- GraphicsMagick (optional) [[docs](http://www.graphicsmagick.org/README.html)]
+- `ruby` >= 2.2.0
+- `bundler` [[info](https://bundler.io/)]
+- GraphicsMagic `gm` (optional) [[info](http://www.graphicsmagick.org/README.html)]
+
+For a list of gem dependencies, see the [Gemfile](https://github.com/AlfredoRamos/clean-reddit-theme/blob/master/Gemfile).
 
 ### Build
 
-Using `sass` Ruby gem.
+First off run `bundler install` to install all required gems, then generate the CSS files using `rake` tasks:
+
+**Normal**
 
 ```shell
-mkdir build
-sass -Ct compressed scss/main.scss build/style.css --sourcemap=none
+rake build:css
+```
+
+**Minified**
+
+```shell
+rake build:minified
+```
+
+**Both**
+
+```shell
+rake build:all
 ```
 
 **Note:** The stylesheet must always be compressed because of the reddit's 100 kb file limit. References:
@@ -29,7 +45,7 @@ sass -Ct compressed scss/main.scss build/style.css --sourcemap=none
 
 ### Usage
 
-Copy the content of the generated `style.css` file to your reddit stylesheet customization page.
+Copy the content of the generated `clean-reddit-theme.min.css` file to your reddit stylesheet customization page.
 
 ```
 reddit.com/r/{YOUR_REDDIT}/about/stylesheet/

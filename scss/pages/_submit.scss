@@ -8,7 +8,7 @@
 
 			.roundfield {
 				border: 1px solid $br-info;
-				@include border-radius($brad-global);
+				border-radius: $brad-global;
 
 				.usertext-edit {
 					width: 100%;

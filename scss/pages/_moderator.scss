@@ -3,7 +3,7 @@
 		.linefield {
 			width: 100%;
 			border: 1px solid $br-info;
-			@include border-radius($brad-global);
+			border-radius: $brad-global;
 
 			.linefield-content {
 				padding: 0;
@@ -37,7 +37,7 @@
 					textarea {
 						width: 100%;
 						border-color: $bg-header;
-						@include box-shadow(none);
+						box-shadow: none;
 					}
 				}
 			}
@@ -47,14 +47,14 @@
 			.linefield {
 				width: 100%;
 				border: 1px solid $br-info;
-				@include border-radius($brad-global);
+				border-radius: $brad-global;
 			}
 		}
 
 		.tabpane-content {
 			padding: 0;
 			background-color: $bg-content-default;
-			@include border-radius($brad-global);
+			border-radius: $brad-global;
 
 			.flairlist {
 				.flair-jump {
@@ -81,7 +81,7 @@
 			margin: 15px 0;
 
 			li {
-				width: 49%;
+				width: (percentage(6/12) - 1%); // .col-6 -1%
 			}
 		}
 	}

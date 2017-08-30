@@ -30,7 +30,7 @@
 
 			.drop-choices {
 				background-color: $bg-footer;
-				@include border-radius($brad-global);
+				border-radius: $brad-global;
 
 				.choice {
 					&:hover {
@@ -94,7 +94,7 @@
 					background-color: $bg-header-right;
 					font-weight: normal;
 					padding: 2px 5px;
-					@include border-radius($brad-global);
+					border-radius: $brad-global;
 
 					&:hover {
 						background-color: $bg-tab;
@@ -116,7 +116,7 @@
 	#header-bottom-right {
 		background-color: $bg-header-right;
 		margin: 5px;
-		@include border-radius($brad-global);
+		border-radius: $brad-global;
 
 		// Responsive
 		@include responsive(max-width, ($res-breakpoint - 1)) {

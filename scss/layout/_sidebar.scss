@@ -1,11 +1,11 @@
 .side {
 	background-color: $bg-body;
 	margin: 0;
-	@include border-radius($brad-global);
+	border-radius: $brad-global;
 
 	// Responsive
 	@include responsive(min-width, $res-breakpoint) {
-		width: 25%;	// .col-md-3
+		width: percentage(3/12); // .col-3
 	}
 
 	// Search input
@@ -18,7 +18,7 @@
 
 	#searchexpando,
 	.linkinfo {
-		@include border-radius($brad-global);
+		border-radius: $brad-global;
 	}
 
 	.linkinfo {
@@ -60,7 +60,7 @@
 		text-transform: uppercase;
 		font-size: 13px;
 		border: none;
-		@include border-radius($brad-global);
+		border-radius: $brad-global;
 
 		&,
 		.nub {
@@ -103,7 +103,7 @@
 		border: 1px solid $br-sidebox;
 		padding: 5px;
 		background-color: $bg-side-content;
-		@include border-radius($brad-global);
+		border-radius: $brad-global;
 	}
 
 	.sidecontentbox {

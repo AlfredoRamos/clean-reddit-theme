@@ -10,7 +10,7 @@
 			border-top: none;
 			margin: 0 0 15px;
 			border-bottom-width: 1px;
-			@include border-radius(0 0 $brad-global $brad-global);
+			border-radius: 0 0 $brad-global $brad-global;
 		}
 	}
 }

@@ -1,27 +1,23 @@
+# encoding: UTF-8
 require 'minitest/autorun'
+require 'rake'
+require 'fileutils'
 
 class TestCss < Minitest::Test
 
   def setup
-    Dir.mkdir('build') unless Dir.exist?('build')
+    # Load tasks
+    load('Rakefile', true)
 
-    @files = {
-      :input  => 'scss/main.scss',
-      :output => 'build/style.css'
-    }
+    # Clean build
+    FileUtils.rm_r('build', force: true, secure: true) if Dir.exist?('build')
   end
 
   def test_css_file
     # Create CSS file
-    system('sass -Ct compressed %1$s %2$s --sourcemap=none' % [
-      @files[:input],
-      @files[:output]
-    ])
+    Rake::Task['build:minified'].invoke
 
-    # Check the previous command exit code
-    assert_same(0, $?.to_i)
-
-    # Check if file was created
-    assert File.exist?(@files[:output])
+    # Check if file exists
+    assert File.exist?('build/clean-reddit-theme.min.css')
   end
 end

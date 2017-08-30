@@ -7,7 +7,7 @@
 				background-color: $bg-submit-link;
 				text-decoration: none;
 				border: none;
-				@include border-radius($brad-global);
+				border-radius: $brad-global;
 			}
 
 			&,
