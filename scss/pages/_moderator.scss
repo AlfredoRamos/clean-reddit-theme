@@ -51,6 +51,23 @@
 			}
 		}
 
+		.tabmenu {
+			li {
+				> a {
+					background-color: $bg-content-default;
+					border: 1px solid $br-info;
+					color: $br-footer;
+				}
+
+				&.selected {
+					> a {
+						border-bottom-color: $bg-content-default;
+						color: $fg-link;
+					}
+				}
+			}
+		}
+
 		.tabpane-content {
 			padding: 0;
 			background-color: $bg-content-default;
