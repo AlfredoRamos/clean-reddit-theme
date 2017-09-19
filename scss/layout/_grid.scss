@@ -1,4 +1,7 @@
 body {
+	display: flex;
+	flex-wrap: wrap;
+
 	%grid-column {
 		position: relative;
 		width: 100%;
@@ -31,16 +34,16 @@ body {
 
 		// Posts
 		.linklisting {
-		.thing {
-			.rank,
-			.midcol.likes,
-			.midcol.unvoted {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
+			.thing {
+				.rank,
+				.midcol.likes,
+				.midcol.unvoted {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+				}
 			}
 		}
-	}
 	}
 
 	> .footer-parent {
