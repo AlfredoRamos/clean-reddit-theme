@@ -1,7 +1,7 @@
 .search-page {
 	.searchpane {
 		margin: 0;
-		padding: 10px 20px;
+		padding: 0;
 
 		#search {
 			padding: 0;
@@ -14,6 +14,13 @@
 
 			.search-submit-button {
 				width: (percentage(1/12) - 1%); // .col-1 - 1%
+				padding: 0;
+
+				> .search-icon {
+					padding: 15px;
+					background-position: 50%;
+					background-repeat: no-repeat;
+				}
 			}
 		}
 	}
@@ -21,6 +28,7 @@
 	.search-result-group {
 		max-width: 100%;
 		min-width: 100%;
+		padding: 0;
 
 		.search-result {
 			display: block;
