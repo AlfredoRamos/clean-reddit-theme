@@ -1,5 +1,23 @@
 .wiki-page {
 	.wiki-page-content {
 		margin: 0;
+
+		// Markdown formatting help
+		.markhelp {
+			font-size: small;
+
+			&,
+			.md {
+				max-width: 100%;
+			}
+
+			.md {
+				width: 100%;
+
+				.spaces {
+					background-color: $br-content;
+				}
+			}
+		}
 	}
 }
