@@ -9,6 +9,8 @@
 body {
 	background-color: $bg-body;
 	font-family: $font-family;
+	display: flex;
+	flex-wrap: wrap;
 
 	input[type="text"],
 	input[type="password"],

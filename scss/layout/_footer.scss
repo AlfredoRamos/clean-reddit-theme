@@ -7,7 +7,7 @@
 		color: $bg-tab;
 	}
 
-	& > .footer {
+	> .footer {
 		border: none;
 
 		// Responsive
@@ -20,8 +20,6 @@
 
 			// Responsive
 			@include responsive(max-width, ($res-breakpoint - 1)) {
-				width: percentage(6/12); // .col-6
-
 				&:nth-child(2n+1) {
 					border-left: none;
 				}

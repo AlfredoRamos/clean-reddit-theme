@@ -1,0 +1,67 @@
+body {
+	%grid-column {
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		overflow: hidden;
+	}
+
+	> #header {
+		@extend %grid-column;
+		flex: 0 0 percentage(12/12); // .col-12
+		order: 1;
+	}
+
+	> .side {
+		@include responsive(min-width, $res-breakpoint) {
+			flex: 0 0 percentage(3/12); // .col-3
+			max-width: percentage(3/12); // .col-3
+		}
+		@extend %grid-column;
+		order: 3;
+	}
+
+	> .content {
+		@include responsive(min-width, $res-breakpoint) {
+			flex: 0 0 percentage(9/12); // .col-9
+			max-width: percentage(9/12); // .col-9
+		}
+		@extend %grid-column;
+		order: 2;
+
+		// Posts
+		.linklisting {
+		.thing {
+			.rank,
+			.midcol.likes,
+			.midcol.unvoted {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
+		}
+	}
+	}
+
+	> .footer-parent {
+		@extend %grid-column;
+		flex: 0 0 percentage(12/12); // .col-12
+		order: 4;
+
+		> .footer {
+			.col {
+				@include responsive(max-width, ($res-breakpoint - 1)) {
+					flex: 0 0 percentage(6/12); // .col-6
+					max-width: percentage(6/12); // .col-6
+				}
+				@extend %grid-column;
+			}
+		}
+	}
+
+	> .debuginfo {
+		@extend %grid-column;
+		flex: 0 0 percentage(12/12); // .col-12
+		order: 5;
+	}
+}

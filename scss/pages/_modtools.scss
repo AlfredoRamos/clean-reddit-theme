@@ -1,12 +1,12 @@
 .modtools-page {
-	& > div.content {
+	> div.content {
 		margin: 0;
 		padding: 10px;
 
 		// Rules
 		.subreddit-rules-page {
 			&,
-			& > #subreddit-rule-add-form {
+			> #subreddit-rule-add-form {
 				max-width: 100%;
 			}
 		}

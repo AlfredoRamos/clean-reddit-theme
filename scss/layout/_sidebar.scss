@@ -3,11 +3,6 @@
 	margin: 0;
 	border-radius: $brad-global;
 
-	// Responsive
-	@include responsive(min-width, $res-breakpoint) {
-		width: percentage(3/12); // .col-3
-	}
-
 	// Search input
 	#search {
 		input[type="text"] {
