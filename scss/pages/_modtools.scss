@@ -5,8 +5,14 @@
 
 		// Rules
 		.subreddit-rules-page {
+			padding: 0;
+
+			&::before {
+				display: none;
+			}
+
 			&,
-			> #subreddit-rule-add-form {
+			#subreddit-rule-add-form {
 				max-width: 100%;
 			}
 		}
