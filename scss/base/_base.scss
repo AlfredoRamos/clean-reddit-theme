@@ -1,7 +1,7 @@
 * {
 	&,
-	&:before,
-	&:after {
+	&::before,
+	&::after {
 		box-sizing: border-box;
 	}
 }
@@ -10,14 +10,14 @@ body {
 	background-color: $bg-body;
 	font-family: $font-family;
 
-	input[type="text"],
-	input[type="password"],
-	input[type="url"],
+	[type="text"],
+	[type="password"],
+	[type="url"],
 	textarea {
-		width: 100%;
-		padding: 3px;
 		border: 1px solid $br-sidebox;
 		border-radius: $brad-global;
+		padding: 3px;
+		width: 100%;
 	}
 
 	textarea {
@@ -27,8 +27,8 @@ body {
 		max-height: 300px;
 	}
 
-	input[type="radio"],
-	input[type="checkbox"] {
+	[type="radio"],
+	[type="checkbox"] {
 		vertical-align: text-bottom;
 	}
 }
