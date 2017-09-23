@@ -1,9 +1,9 @@
 .moderator {
 	.content {
 		.linefield {
-			width: 100%;
 			border: 1px solid $br-info;
 			border-radius: $brad-global;
+			width: 100%;
 
 			.linefield-content {
 				padding: 0;
@@ -33,11 +33,11 @@
 						}
 					}
 
-					input[type="text"],
+					[type="text"],
 					textarea {
-						width: 100%;
 						border-color: $bg-header;
 						box-shadow: none;
+						width: 100%;
 					}
 				}
 			}
@@ -45,17 +45,17 @@
 
 		.flair-settings {
 			.linefield {
-				width: 100%;
 				border: 1px solid $br-info;
 				border-radius: $brad-global;
+				width: 100%;
 			}
 		}
 
 		.tabmenu {
 			li {
 				> a {
-					background-color: $bg-content-default;
 					border: 1px solid $br-info;
+					background-color: $bg-content-default;
 					color: $br-footer;
 				}
 
@@ -69,9 +69,9 @@
 		}
 
 		.tabpane-content {
-			padding: 0;
-			background-color: $bg-content-default;
 			border-radius: $brad-global;
+			background-color: $bg-content-default;
+			padding: 0;
 
 			.flairlist {
 				.flair-jump {
@@ -98,7 +98,7 @@
 			margin: 15px 0;
 
 			li {
-				width: (percentage(6/12) - 1%); // .col-6 -1%
+				width: (percentage(6 / 12) - 1%); // .col-6 -1%
 			}
 		}
 	}

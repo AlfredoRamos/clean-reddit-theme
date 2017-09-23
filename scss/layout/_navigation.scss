@@ -4,10 +4,10 @@
 			&,
 			&:hover,
 			&:visited {
-				background-color: $bg-submit-link;
-				text-decoration: none;
 				border: none;
 				border-radius: $brad-global;
+				background-color: $bg-submit-link;
+				text-decoration: none;
 			}
 
 			&,

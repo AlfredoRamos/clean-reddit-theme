@@ -32,11 +32,11 @@ body > .content {
 		// Post/Comment
 		.thing {
 			display: block;
-			background-color: $bg-post-odd;
-			padding: 2px 5px;
 			margin: 0 0 5px;
 			border: 1px solid $br-content;
 			border-radius: $brad-global;
+			background-color: $bg-post-odd;
+			padding: 2px 5px;
 		}
 	}
 
@@ -65,13 +65,13 @@ body > .content {
 		.panestack-title,
 		.menuarea,
 		> .usertext {
-			background-color: $bg-post-even;
-			padding-left: 10px;
-			padding-right: 10px;
+			border-right-width: 1px;
+			border-left-width: 1px;
 			border-style: solid;
 			border-color: $br-sidebox;
-			border-left-width: 1px;
-			border-right-width: 1px;
+			background-color: $bg-post-even;
+			padding-right: 10px;
+			padding-left: 10px;
 		}
 
 		.panestack-title,
@@ -80,18 +80,18 @@ body > .content {
 		}
 
 		.panestack-title {
-			padding-top: 5px;
-			padding-bottom: 5px;
 			border-top-width: 1px;
 			border-radius: $brad-global $brad-global 0 0;
+			padding-top: 5px;
+			padding-bottom: 5px;
 		}
 
 		.menuarea {
-			border-top: none;
 			margin: 0 0 15px;
-			padding: 4px 8px;
+			border-top: none;
 			border-bottom-width: 1px;
 			border-radius: 0 0 $brad-global $brad-global;
+			padding: 4px 8px;
 		}
 
 		.usertext {
@@ -111,18 +111,18 @@ body > .content {
 		}
 
 		.comment-visits-box {
-			max-width: 100%;
-			width: 100%;
 			margin: 0 0 15px;
-			text-align: center;
-			padding: 4px 8px;
 			border-radius: $brad-global;
+			padding: 4px 8px;
+			width: 100%;
+			max-width: 100%;
+			text-align: center;
 		}
 
 		&,
 		.sitetable {
-			background-color: transparent;
 			margin: 5px 0 0;
+			background-color: transparent;
 
 			#noresults {
 				margin: 0;
@@ -145,8 +145,8 @@ body > .content {
 	// New comment
 	.new-comment {
 		.usertext-body {
-			background-color: transparent;
 			border: none;
+			background-color: transparent;
 		}
 	}
 }

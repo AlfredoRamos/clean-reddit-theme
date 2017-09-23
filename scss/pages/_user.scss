@@ -2,13 +2,13 @@
 	// Comments
 	.commentarea {
 		.menuarea {
-			border-bottom: none;
 			margin: 0;
+			border-bottom: none;
 		}
 
 		> .usertext {
-			border-top: none;
 			margin: 0 0 15px;
+			border-top: none;
 			border-bottom-width: 1px;
 			border-radius: 0 0 $brad-global $brad-global;
 		}

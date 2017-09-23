@@ -1,7 +1,7 @@
 #header {
-	background-image: url(%%header-background%%);
-	background-color: $bg-header;
 	border: none;
+	background-color: $bg-header;
+	background-image: url(%%header-background%%);
 	padding-bottom: 15px;
 
 	// Responsive
@@ -11,8 +11,8 @@
 	}
 
 	#sr-header-area {
-		background-color: $bg-footer;
 		border: none;
+		background-color: $bg-footer;
 
 		a {
 			color: $br-content;
@@ -30,8 +30,8 @@
 			}
 
 			.drop-choices {
-				background-color: $bg-footer;
 				border-radius: $brad-global;
+				background-color: $bg-footer;
 
 				.choice {
 					&:hover {
@@ -67,8 +67,8 @@
 
 		#header-img-a {
 			#header-img {
-				vertical-align: middle;
 				margin: 2px 5px 5px;
+				vertical-align: middle;
 			}
 		}
 
@@ -82,9 +82,9 @@
 
 			// Responsive
 			@include responsive(max-width, ($res-breakpoint - 1)) {
-				white-space: normal;
-				margin-left: 3px;
 				margin-right: 3px;
+				margin-left: 3px;
+				white-space: normal;
 			}
 
 			li {
@@ -92,10 +92,10 @@
 				margin: 0 2px 8px;
 
 				.choice {
-					background-color: $bg-header-right;
-					font-weight: normal;
-					padding: 2px 5px;
 					border-radius: $brad-global;
+					background-color: $bg-header-right;
+					padding: 2px 5px;
+					font-weight: normal;
 
 					&:hover {
 						background-color: $bg-tab;
@@ -104,10 +104,10 @@
 
 				&.selected {
 					.choice {
-						font-weight: bold;
 						border: none;
-						color: $bg-post-odd;
 						background-color: $bg-tab;
+						color: $bg-post-odd;
+						font-weight: bold;
 					}
 				}
 			}
@@ -115,9 +115,9 @@
 	}
 
 	#header-bottom-right {
-		background-color: $bg-header-right;
 		margin: 5px;
 		border-radius: $brad-global;
+		background-color: $bg-header-right;
 
 		// Responsive
 		@include responsive(max-width, ($res-breakpoint - 1)) {

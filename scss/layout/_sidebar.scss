@@ -1,12 +1,12 @@
 .side {
-	background-color: $bg-body;
+	float: none;
 	margin: 0;
 	border-radius: $brad-global;
-	float: none;
+	background-color: $bg-body;
 
 	// Search input
 	#search {
-		input[type="text"] {
+		[type="text"] {
 			border-color: $br-sidebox;
 			width: 100%;
 		}
@@ -32,7 +32,7 @@
 	}
 
 	#searchexpando {
-		input[type="checkbox"] {
+		[type="checkbox"] {
 			margin-bottom: 0;
 		}
 	}
@@ -41,22 +41,22 @@
 	.login-form-side {
 		border: none;
 
-		input[type="text"],
-		input[type="password"] {
-			width: 97%;
+		[type="text"],
+		[type="password"] {
 			display: block;
 			margin: 5px auto 0;
+			width: 97%;
 			font-family: $font-family;
 		}
 	}
 
 	// Submit links
 	.morelink {
+		border: none;
+		border-radius: $brad-global;
 		background-color: $bg-submit-link;
 		text-transform: uppercase;
 		font-size: 13px;
-		border: none;
-		border-radius: $brad-global;
 
 		&,
 		.nub {
@@ -64,10 +64,10 @@
 		}
 
 		.nub {
+			display: none;
 			position: relative;
 			width: 0;
 			height: 0;
-			display: none;
 		}
 
 		&,
@@ -97,23 +97,23 @@
 	.titlebox,
 	.account-activity-box {
 		border: 1px solid $br-sidebox;
-		padding: 5px;
-		background-color: $bg-side-content;
 		border-radius: $brad-global;
+		background-color: $bg-side-content;
+		padding: 5px;
 	}
 
 	.sidecontentbox {
 		.title {
-			padding: 0 0 5px;
 			border-width: 0 0 1px;
 			border-style: solid;
 			border-color: $fg-link-light;
+			padding: 0 0 5px;
 
 			h1 {
-				font-weight: bold;
-				font-size: 13px;
 				line-height: 16px;
 				color: $bg-header;
+				font-size: 13px;
+				font-weight: bold;
 			}
 		}
 
@@ -129,15 +129,15 @@
 	.titlebox {
 		h1 {
 			text-transform: uppercase;
+			line-height: 16px;
 			font-family: $font-family;
 			font-size: 13px;
-			line-height: 16px;
 		}
 
 		.subscribe-button {
 			.option {
-				background-image: none;
 				border-color: transparent;
+				background-image: none;
 			}
 
 			.add {
@@ -156,17 +156,17 @@
 
 	// Ads
 	#ad_main_top, #ad_main {
-		max-width: 100%;
 		margin: 0 auto;
+		max-width: 100%;
 	}
 
 	// Credits
 	// Respect my work, do not edit
 	&::after {
-		content: "Theme by /u/AbaddonOrmuz";
 		display: block;
-		text-align: center;
 		margin: 15px 0 10px;
+		text-align: center;
 		color: $bg-tab;
+		content: 'Theme by /u/AbaddonOrmuz';
 	}
 }
