@@ -7,20 +7,14 @@
  * @license GNU GPL-3.0+
  */
 
-//-------------------------------------------------------
-// ABSTRACTS
-//-------------------------------------------------------
+// Abstracts
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
-//-------------------------------------------------------
-// BASE
-//-------------------------------------------------------
+// Base
 @import 'base/base';
 
-//-------------------------------------------------------
-// LAYOUT
-//-------------------------------------------------------
+// Layout
 @import 'layout/grid';
 @import 'layout/header';
 @import 'layout/content';
@@ -30,9 +24,7 @@
 @import 'layout/navigation';
 @import 'layout/debug';
 
-//-------------------------------------------------------
-// PAGES
-//-------------------------------------------------------
+// Pages
 @import 'pages/submit';
 @import 'pages/user';
 @import 'pages/search';
