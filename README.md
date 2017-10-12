@@ -8,9 +8,9 @@ A precompiled CSS file (`clean-reddit-theme.css`) can be found in [this gist](ht
 
 ### Dependencies
 
-- `ruby` >= 2.2.0
-- `bundler` [[info](https://bundler.io/)]
-- GraphicsMagic `gm` (optional) [[info](http://www.graphicsmagick.org/README.html)]
+- Ruby >= 2.2.0
+- Bundler [[info](https://bundler.io/)]
+- GraphicsMagic (optional) [[info](http://www.graphicsmagick.org/README.html)]
 
 For a list of gem dependencies, see the [Gemfile](https://github.com/AlfredoRamos/clean-reddit-theme/blob/master/Gemfile).
 

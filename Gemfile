@@ -3,9 +3,8 @@ ruby RUBY_VERSION
 
 gem 'sass', '~>3.5.0'
 gem 'autoprefixer-rails'
+gem 'rake'
 
-# Unit testing
 group :test do
-  gem 'rake'
   gem 'minitest'
 end
