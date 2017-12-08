@@ -15,21 +15,23 @@ body {
 	}
 
 	> .side {
+		@extend %grid-column;
+		order: 3;
+
 		@include responsive(min-width, $res-breakpoint) {
 			flex: 0 0 percentage(3 / 12); // .col-3
 			max-width: percentage(3 / 12); // .col-3
 		}
-		@extend %grid-column;
-		order: 3;
 	}
 
 	> .content {
+		@extend %grid-column;
+		order: 2;
+
 		@include responsive(min-width, $res-breakpoint) {
 			flex: 0 0 percentage(9 / 12); // .col-9
 			max-width: percentage(9 / 12); // .col-9
 		}
-		@extend %grid-column;
-		order: 2;
 
 		// Posts
 		.linklisting {
@@ -52,11 +54,12 @@ body {
 
 		> .footer {
 			.col {
+				@extend %grid-column;
+
 				@include responsive(max-width, ($res-breakpoint - 1)) {
 					flex: 0 0 percentage(6 / 12); // .col-6
 					max-width: percentage(6 / 12); // .col-6
 				}
-				@extend %grid-column;
 			}
 		}
 	}
