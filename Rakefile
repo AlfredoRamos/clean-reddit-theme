@@ -15,8 +15,6 @@ end
 # SCSS Lint
 SCSSLint::RakeTask.new
 
-task :default => :test
-
 namespace :build do
   files = {
     input: 'scss/main.scss',
