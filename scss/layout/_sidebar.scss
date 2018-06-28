@@ -96,9 +96,7 @@
 	.sidecontentbox,
 	.titlebox,
 	.account-activity-box {
-		border: 1px solid $br-sidebox;
-		border-radius: $brad-global;
-		background-color: $bg-side-content;
+		border-top: 1px solid $br-sidebox;
 		padding: 5px;
 	}
 
@@ -127,11 +125,20 @@
 	}
 
 	.titlebox {
-		h1 {
+		.redditname,
+		h2 {
 			text-transform: uppercase;
 			line-height: 16px;
 			font-family: $font-family;
+			font-weight: bold;
+		}
+
+		.redditname {
 			font-size: 13px;
+		}
+
+		h2 {
+			font-size: 11px;
 		}
 
 		.subscribe-button {
@@ -152,6 +159,11 @@
 		.bottom {
 			border-color: $fg-link-light;
 		}
+
+		.toggle,
+		.leavemoderator {
+			background-color: transparent;
+		}
 	}
 
 	// Ads
@@ -168,6 +180,7 @@
 		margin: 15px 0 10px;
 		text-align: center;
 		color: $bg-tab;
+		font-size: 11px;
 		content: 'Theme by /u/AbaddonOrmuz';
 	}
 }
