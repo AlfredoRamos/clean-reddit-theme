@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'rake/testtask'
-require 'sass'
+require 'sassc'
 require 'autoprefixer-rails'
 require 'scss_lint/rake_task'
 
@@ -30,7 +30,7 @@ namespace :build do
   desc 'Base build'
   task :base, [:opts] => [:setup] do |_t, args|
     File.open(args[:opts][:output], 'w') do |f|
-      css = Sass::Engine.new(
+      css = SassC::Engine.new(
         File.read(args[:opts][:input]),
         style: args[:opts][:style],
         cache: false,
